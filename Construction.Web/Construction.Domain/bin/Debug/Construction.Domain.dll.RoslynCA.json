@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "1.3.1.0",
+        "fileVersion": "1.3.1.60616",
+        "semanticVersion": "1.3.1",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/ApplicationUserManager.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 13,
+                  "endLine": 52,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'Product_Category' to match camel case naming rules, consider using 'ProductCategory'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Models/Product_Category.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 26,
+                  "endLine": 6,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1939",
+          "level": "warning",
+          "message": "'UserStore<User, Role, string, UserLogin, UserRole, UserClaim>' implements 'IUserStore<User, string>' so 'IUserStore<User, string>' can be removed from the inheritance list.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/ApplicationUserManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 102,
+                  "endLine": 14,
+                  "endColumn": 128
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "redundantIndex": "1"
+            }
+          }
+        },
+        {
+          "ruleId": "S1939",
+          "level": "warning",
+          "message": "'IUserStore<User, string>' implements 'IDisposable' so 'IDisposable' can be removed from the inheritance list.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/ApplicationUserManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 128,
+                  "endLine": 14,
+                  "endColumn": 141
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "redundantIndex": "2"
+            }
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/ApplicationUserManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 18,
+                  "endLine": 14,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/ApplicationUserManager.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 130,
+                  "endLine": 14,
+                  "endColumn": 141
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Remove 'IDisposable' from the list of interfaces implemented by 'ApplicationUserStore' and override the base class 'Dispose' implementation instead."
+            }
+          }
+        },
+        {
+          "ruleId": "S1186",
+          "level": "warning",
+          "message": "Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/DatabaseContext.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 33,
+                  "endLine": 24,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove this unused 'userContext' local variable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Working/Git/Construction.Web/Construction.Domain/Infrastructure/DataContextDBInitializer.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 17,
+                  "endLine": 16,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in camel case",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true
+          }
+        },
+        "S1186": {
+          "id": "S1186",
+          "shortDescription": "Methods should not be empty",
+          "fullDescription": "There are several reasons for a method not to have a method body:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1186",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be \"commented out\"",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true
+          }
+        },
+        "S1939": {
+          "id": "S1939",
+          "shortDescription": "Inheritance list should not be redundant",
+          "fullDescription": "An inheritance list entry is redundant if:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1939",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Unnecessary"
+            ]
+          }
+        },
+        "S3881": {
+          "id": "S3881",
+          "shortDescription": "\"IDisposable\" should be implemented correctly",
+          "fullDescription": "The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3881",
+          "properties": {
+            "category": "Sonar Code Smell",
+            "isEnabledByDefault": true
+          }
+        }
+      }
+    }
+  ]
+}

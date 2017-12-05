@@ -1,0 +1,252 @@
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\ApplicationInsights.config
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\csc.exe
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\vbc.exe
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Construction.Web.dll.config
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Construction.Web.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Construction.Web.pdb
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Antlr3.Runtime.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\EntityFramework.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Newtonsoft.Json.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Owin.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Helpers.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Mvc.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Optimization.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Razor.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\WebGrease.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Helpers.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Mvc.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Optimization.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.Razor.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Antlr3.Runtime.pdb
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Newtonsoft.Json.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\EntityFramework.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\obj\Debug\Construction.Web.csprojResolveAssemblyReference.cache
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\obj\Debug\Construction.Web.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\obj\Debug\Construction.Web.pdb
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Construction.Domain.dll
+C:\Users\Huy-PV\Documents\Visual Studio 2015\Projects\Construction.Web\Construction.Web\bin\Construction.Domain.pdb
+E:\Working\Git\Construction.Web\Construction.Web\bin\ApplicationInsights.config
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\csc.exe
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\vbc.exe
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe
+E:\Working\Git\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Web.dll.config
+E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Web.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Web.pdb
+E:\Working\Git\Construction.Web\Construction.Web\bin\Antlr3.Runtime.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Domain.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\EntityFramework.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Newtonsoft.Json.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Owin.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Helpers.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Mvc.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Optimization.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Razor.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\WebGrease.dll
+E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Domain.pdb
+E:\Working\Git\Construction.Web\Construction.Web\bin\EntityFramework.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Helpers.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Mvc.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Optimization.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.Razor.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Antlr3.Runtime.pdb
+E:\Working\Git\Construction.Web\Construction.Web\bin\Newtonsoft.Json.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Working\Git\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Working\Git\Construction.Web\Construction.Web\obj\Debug\Construction.Web.csprojResolveAssemblyReference.cache
+E:\Working\Git\Construction.Web\Construction.Web\obj\Debug\Construction.Web.dll
+E:\Working\Git\Construction.Web\Construction.Web\obj\Debug\Construction.Web.pdb
+E:\Working\Git\working-project\Construction.Web\Construction.Web\obj\Debug\Construction.Web.csprojResolveAssemblyReference.cache
+E:\Working\Git\working-project\Construction.Web\Construction.Web\obj\Debug\Construction.Web.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\obj\Debug\Construction.Web.pdb
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\ApplicationInsights.config
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\csc.exe
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\vbc.exe
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Construction.Web.dll.config
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Construction.Web.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Construction.Web.pdb
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Antlr3.Runtime.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Construction.Domain.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\EntityFramework.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Newtonsoft.Json.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Owin.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Helpers.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Mvc.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Optimization.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Razor.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\WebGrease.dll
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Construction.Domain.pdb
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\EntityFramework.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\EntityFramework.SqlServer.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.DependencyCollector.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.Web.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AI.WindowsServer.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.ApplicationInsights.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Helpers.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Mvc.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Optimization.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.Razor.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\System.Web.WebPages.Razor.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Antlr3.Runtime.pdb
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Newtonsoft.Json.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Working\Git\working-project\Construction.Web\Construction.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml

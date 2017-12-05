@@ -1,0 +1,15 @@
+g
+^E:\Working\Git\Construction.Web\Construction.Domain\Infrastructure\ApplicationUserDbContext.csutf-8e
+\E:\Working\Git\Construction.Web\Construction.Domain\Infrastructure\ApplicationUserManager.csutf-8g
+^E:\Working\Git\Construction.Web\Construction.Domain\Infrastructure\DataContextDBInitializer.csutf-8[
+RE:\Working\Git\Construction.Web\Construction.Domain\Models\AspIdentityUser\Role.csutf-8[
+RE:\Working\Git\Construction.Web\Construction.Domain\Models\AspIdentityUser\User.csutf-8`
+WE:\Working\Git\Construction.Web\Construction.Domain\Models\AspIdentityUser\UserClaim.csutf-8`
+WE:\Working\Git\Construction.Web\Construction.Domain\Models\AspIdentityUser\UserLogin.csutf-8_
+VE:\Working\Git\Construction.Web\Construction.Domain\Models\AspIdentityUser\UserRole.csutf-8O
+FE:\Working\Git\Construction.Web\Construction.Domain\Models\Category.csutf-8^
+UE:\Working\Git\Construction.Web\Construction.Domain\Infrastructure\DatabaseContext.csutf-8N
+EE:\Working\Git\Construction.Web\Construction.Domain\Models\Product.csutf-8W
+NE:\Working\Git\Construction.Web\Construction.Domain\Models\Product_Category.csutf-8N
+EE:\Working\Git\Construction.Web\Construction.Domain\Models\Setting.csutf-8W
+NE:\Working\Git\Construction.Web\Construction.Domain\Properties\AssemblyInfo.csutf-8

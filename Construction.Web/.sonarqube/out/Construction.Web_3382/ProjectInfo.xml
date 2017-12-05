@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Construction.Web</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>f98454f3-a78b-4bab-8087-b8078bfb3c4f</ProjectGuid>
+  <FullPath>E:\Working\Git\Construction.Web\Construction.Web\Construction.Web.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="E:\Working\Git\Construction.Web\.sonarqube\out\\Construction.Web_3382\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">E:\Working\Git\Construction.Web\Construction.Web\bin\Construction.Web.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">E:\Working\Git\Construction.Web\.sonarqube\out\\Construction.Web_3382</Property>
+    <Property Name="sonar.stylecop.projectFilePath">E:\Working\Git\Construction.Web\Construction.Web\Construction.Web.csproj</Property>
+  </AnalysisSettings>
+</ProjectInfo>
