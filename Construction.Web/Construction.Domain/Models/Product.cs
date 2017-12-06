@@ -17,7 +17,13 @@ namespace Construction.Domain.Models
 
         [MaxLength(50)]
         public string Name { get; set; }
+
+        [MaxLength(250)]
+        public string ShortDescription { get; set; }
         public string Description { get; set; }
+
+        [MaxLength(50)]
+        public string Thumnail { get; set; }
 
         [MaxLength(50)]
         public string Link { get; set; }

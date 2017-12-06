@@ -14,9 +14,24 @@ namespace Construction.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "About",
+               url: "gioi-thieu",
+               defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional },
+               namespaces: new[] { "Construction.Web.Controllers" }
+           );
+
+           routes.MapRoute(
+               name: "Contact",
+               url: "lien-he",
+               defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional },
+               namespaces: new[] { "Construction.Web.Controllers" }
+           );
+
+           routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "Construction.Web.Controllers" }
             );
         }
     }

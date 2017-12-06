@@ -4,9 +4,8 @@
             <div class="container">
                 <div class="slider-hello"><h2>Hello!</h2><h3>Lorem ipsum dolor sit amet</h3><p>Donec alsuacnc sit amet eroem ipsum dolor sit at conscuer aiing elituris fermen taoreet aliq.</p></div>
                 <script type="text/javascript">
-                    //    jQuery(window).load(function() {
                     jQuery(function () {
-                        var myCamera = jQuery('#camera5a0304814d3e5');
+                        var myCamera = jQuery('#camera');
                         if (!myCamera.hasClass('motopress-camera')) {
                             myCamera.addClass('motopress-camera');
                             myCamera.camera({
@@ -22,17 +21,17 @@
                                 //you can also use more than one effect, just separate them with commas: 'simpleFade, scrollRight, scrollBottom'
                                 mobileFx: '', //leave empty if you want to display the same effect on mobile devices and on desktop etc.
                                 gridDifference: 250, //to make the grid blocks slower than the slices, this value must be smaller than transPeriod
-                                height: '29.05%', //here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
+                                height: '30%', //here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
                                 imagePath: 'images/', //he path to the image folder (it serves for the blank.gif, when you want to display videos)
-                                loader: "no", //pie, bar, none (even if you choose "pie", old browsers like IE8- can't display it... they will display always a loading bar)
+                                loader: "yes", //pie, bar, none (even if you choose "pie", old browsers like IE8- can't display it... they will display always a loading bar)
                                 loaderColor: '#ffffff',
                                 loaderBgColor: '#eb8a7c',
                                 loaderOpacity: 1, //0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1
                                 loaderPadding: 0, //how many empty pixels you want to display between the loader and its background
                                 loaderStroke: 3, //the thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the pie diameter
                                 minHeight: '50px', //you can also leave it blank
-                                navigation: false, //true or false, to display or not the navigation buttons
-                                navigationHover: false, //if true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always
+                                navigation: true, //true or false, to display or not the navigation buttons
+                                navigationHover: true, //if true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always
                                 pagination: false,
                                 playPause: false, //true or false, to display or not the play/pause buttons
                                 pieDiameter: 33,
@@ -54,44 +53,12 @@
                             });
                         }
                     });
-                    //    });
-                </script>
 
-                <div id="camera5a0304814d3e5" class="camera_wrap camera motopress-camera" style="display: block; height: 367px; margin-bottom: 37px;">
-                    <div class="camera_fakehover">
-                        <div class="camera_src camerastarted paused">
-                            <div data-src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-1.jpg" data-link="portfolio-view/in-faucibus-risus/" data-thumb="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-1-98x19.jpg">
-                            </div><div data-src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-2.jpg" data-link="portfolio-view/in-faucibus/" data-thumb="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-2-98x19.jpg">
-                            </div><div data-src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-3.jpg" data-link="portfolio-view/malesuada-fames-ac/" data-thumb="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-3-98x19.jpg">
-                            </div>
-                        </div>
-                        <div class="camera_target"><div class="cameraCont"><div class="cameraSlide cameraSlide_0 cameracurrent" style="visibility: visible; display: block; z-index: 999; margin-left: 0px; margin-top: 0px;"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-1.jpg?1512532504767" class="imgLoaded" style="visibility: visible; height: 367px; margin-left: 0.102151px; margin-right: 0.102151px; margin-top: 0px; position: absolute; width: 1262.8px;" data-alignment="" data-portrait="" width="1600" height="465"><div class="camerarelative" style="width: 1263px; height: 367px;"></div></div><div class="cameraSlide cameraSlide_1 cameranext" style="display: none; z-index: 1; margin-left: 0px; margin-top: 0px;"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-2.jpg?1512532508787" class="imgLoaded" style="visibility: visible; height: 367px; margin-left: 0.102151px; margin-right: 0.102151px; margin-top: 0px; position: absolute; width: 1262.8px;" data-alignment="" data-portrait="" width="1600" height="465"><div class="camerarelative" style="width: 1263px; height: 367px;"></div></div><div class="cameraSlide cameraSlide_2" style="display: none; z-index: 1; margin-left: 0px; margin-top: 0px;"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-3.jpg?1512532521846" class="imgLoaded" data-alignment="" data-portrait="" width="1600" height="465" style="visibility: visible; height: 367px; margin-left: 0.102151px; margin-right: 0.102151px; margin-top: 0px; position: absolute; width: 1262.8px;"><div class="camerarelative" style="width: 1263px; height: 367px;"></div></div><div class="cameraSlide cameraSlide_3 cameranext" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 1263px; height: 367px;"></div></div></div></div><div class="camera_overlayer"></div><div class="camera_target_content">
-                            <div class="cameraContents">
-                                <div class="cameraContent cameracurrent" style="display: block;">
-                                    <a class="camera_link" href="portfolio-view/in-faucibus-risus/" target=""></a><div class="camera_caption fadeFromBottom" style="visibility: visible; opacity: 1; bottom: 0px;">
-                                        <div>
-                                            <h2>Villa Simpatico</h2>
-                                            <p class="price">574`000</p>							<div class="slider-info-wrap"><a href="portfolio-view/in-faucibus-risus/"><div class="slider-info"></div></a></div>
-                                        </div>
-                                    </div>
-                                </div><div class="cameraContent" style="display: none;">
-                                    <a class="camera_link" href="portfolio-view/in-faucibus/" target=""></a><div class="camera_caption fadeFromBottom" style="visibility: hidden; opacity: 1; bottom: 0px;">
-                                        <div>
-                                            <h2>Villa Costa Brava</h2>
-                                            <p class="price">1`350`000</p>							<div class="slider-info-wrap"><a href="portfolio-view/in-faucibus/"><div class="slider-info"></div></a></div>
-                                        </div>
-                                    </div>
-                                </div><div class="cameraContent" style="display: none;">
-                                    <a class="camera_link" href="portfolio-view/malesuada-fames-ac/" target=""></a><div class="camera_caption fadeFromBottom" style="visibility: hidden; opacity: 1; bottom: 0px;">
-                                        <div>
-                                            <h2>Villa Pogoza</h2>
-                                            <p class="price">925`000</p>							<div class="slider-info-wrap"><a href="portfolio-view/malesuada-fames-ac/"><div class="slider-info"></div></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><div class="camera_bar" style="display: none; bottom: auto; height: 3px;"><span class="camera_bar_cont" style="opacity: 1; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; background-color: rgb(235, 138, 124);"><span id="pie_2" style="opacity: 1; position: absolute; background-color: rgb(255, 255, 255); left: 0px; right: 0px; top: 0px; bottom: 0px; display: none;"></span></span></div>
-                    </div><div><div class="camera_thumbs"><div><div class="camera_command_wrap"><div class="camera_prevThumbs hideNav"><div></div></div><div class="camera_nextThumbs hideNav"><div></div></div><div class="camera_thumbs_cont" style="visibility: visible;"><div><ul style="width: 297px; margin-left: auto; margin-right: auto; margin-top: 0px;"><li class="pix_thumb pix_thumb_0 cameracurrent camera_visThumb"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-1-98x19.jpg" class="camera_thumb" style="opacity: 1;"></li><li class="pix_thumb pix_thumb_1 camera_visThumb"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-2-98x19.jpg" class="camera_thumb" style="opacity: 0.5;"></li><li class="pix_thumb pix_thumb_2 camera_visThumb"><img src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2011/07/slider-3-98x19.jpg" class="camera_thumb" style="opacity: 0.5;"></li></ul></div></div></div></div></div></div><div class="camera_loader" style="display: none; visibility: visible;"></div>
+                </script>
+                <div id="camera" class="camera_wrap camera">
+                    <div data-src="@Url.Content("~/asset/images/slider-1.jpg")"></div>
+                    <div data-src="@Url.Content("~/asset/images/slider-2.jpg")"></div>
+                    <div data-src="@Url.Content("~/asset/images/slider-3.jpg")"></div>
                 </div>
             </div>
         </div><!-- .slider -->

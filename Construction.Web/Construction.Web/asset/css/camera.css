@@ -178,7 +178,7 @@
 	z-index: 10;
 }
 .camera_prevThumbs div {
-	background: url(../images/camera_skins.png) no-repeat -160px 0;
+	background: url(../images/camera/camera_skins.png) no-repeat -160px 0;
 	display: block;
 	height: 40px;
 	margin-top: -20px;
@@ -197,7 +197,7 @@
 	z-index: 10;
 }
 .camera_nextThumbs div {
-	background: url(../images/camera_skins.png) no-repeat -190px 0;
+	background: url(../images/camera/camera_skins.png) no-repeat -190px 0;
 	display: block;
 	height: 40px;
 	margin-top: -20px;
@@ -297,7 +297,7 @@
 	left: 0;
 }
 .camera_prev > span {
-	background: url(../images/camera_skins.png) no-repeat 0 0;
+	background: url(../images/camera/camera_skins.png) no-repeat 0 0;
 	display: block;
 	height: 40px;
 	width: 40px;
@@ -306,7 +306,7 @@
 	right: 0;
 }
 .camera_next > span {
-	background: url(../images/camera_skins.png) no-repeat -40px 0;
+	background: url(../images/camera/camera_skins.png) no-repeat -40px 0;
 	display: block;
 	height: 40px;
 	width: 40px;

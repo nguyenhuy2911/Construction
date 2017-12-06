@@ -106,3 +106,30 @@ E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.dll
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.pdb
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.dll.config
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.pdb
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Owin.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.pdb

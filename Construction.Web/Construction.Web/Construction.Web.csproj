@@ -196,6 +196,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +209,31 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\asset\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\asset\css\custom.css" />
+    <Content Include="Areas\Admin\asset\css\daterangepicker.css" />
+    <Content Include="Areas\Admin\asset\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\asset\css\nprogress.css" />
+    <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\asset\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\asset\js\Chart.min.js" />
+    <Content Include="Areas\Admin\asset\js\curvedLines.js" />
+    <Content Include="Areas\Admin\asset\js\custom.js" />
+    <Content Include="Areas\Admin\asset\js\date.js" />
+    <Content Include="Areas\Admin\asset\js\daterangepicker.js" />
+    <Content Include="Areas\Admin\asset\js\fastclick.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.orderBars.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.pie.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.resize.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.spline.min.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.stack.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.flot.time.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.min.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.sparkline.min.js" />
+    <Content Include="Areas\Admin\asset\js\moment.min.js" />
+    <Content Include="Areas\Admin\asset\js\nprogress.js" />
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
@@ -221,10 +248,15 @@
     <Content Include="asset\font-awesome\css\font-awesome.css" />
     <Content Include="asset\font-awesome\css\font-awesome.min.css" />
     <Content Include="asset\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="asset\images\camera\camera-loader.gif" />
+    <Content Include="asset\images\camera\camera_skins.png" />
     <Content Include="asset\images\loading_32.gif" />
     <Content Include="asset\images\loading_bg_32.png" />
     <Content Include="asset\images\logo.png" />
     <Content Include="asset\images\magnify-alt.png" />
+    <Content Include="asset\images\slider-1.jpg" />
+    <Content Include="asset\images\slider-2.jpg" />
+    <Content Include="asset\images\slider-3.jpg" />
     <Content Include="asset\images\totop.png" />
     <Content Include="asset\js\bootstrap.min.js" />
     <Content Include="asset\js\camera.min.js" />
@@ -251,8 +283,6 @@
     <Content Include="asset\js\swfobject.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -261,6 +291,19 @@
     <Content Include="asset\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="asset\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="asset\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\asset\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -313,6 +356,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
