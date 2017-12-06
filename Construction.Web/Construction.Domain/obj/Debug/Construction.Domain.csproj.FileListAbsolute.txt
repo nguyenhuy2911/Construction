@@ -79,3 +79,30 @@ E:\Working\Git\working-project\Construction.Web\Construction.Domain\bin\Debug\Mi
 E:\Working\Git\working-project\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 E:\Working\Git\working-project\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 E:\Working\Git\working-project\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.dll.config
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Construction.Domain.pdb
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Owin.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.pdb
