@@ -615,8 +615,6 @@ if (typeof NProgress != 'undefined') {
 	
 	
 	function init_JQVmap(){
-
-		//console.log('check init_JQVmap [' + typeof (VectorCanvas) + '][' + typeof (jQuery.fn.vectorMap) + ']' );	
 		
 		if(typeof (jQuery.fn.vectorMap) === 'undefined'){ return; }
 		

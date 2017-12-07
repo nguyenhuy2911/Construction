@@ -12,9 +12,10 @@ namespace Construction.Web
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+           
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AreaRegistration.RegisterAllAreas();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);            
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Construction.Web.Areas.Admin.Controllers
 {
+    
     public class HomeController : Controller
     {
         // GET: Admin/Home

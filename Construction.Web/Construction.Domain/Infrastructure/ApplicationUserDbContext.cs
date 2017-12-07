@@ -10,13 +10,14 @@ namespace Construction.Domain.Infrastructure
 {
     public class ApplicationUserDbContext : IdentityDbContext<User, Role, string, UserLogin, UserRole, UserClaim>
     {
+        private static ApplicationUserDbContext _applicationUserContext;
         public ApplicationUserDbContext() : base("DatabaseContext")
         {
         }
 
         public static ApplicationUserDbContext Create()
         {
-            return new ApplicationUserDbContext();
+            return _applicationUserContext ?? (_applicationUserContext = new ApplicationUserDbContext());
         }
     }
 }

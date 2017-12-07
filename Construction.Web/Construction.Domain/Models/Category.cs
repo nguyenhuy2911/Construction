@@ -5,22 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Construction.Domain.Models
 {
-    public partial class Category
+    public partial class Category : BaseModel
     {
         public Category()
         {
-            this.Product_Category = new List<Product_Category>();
+            this.Products = new List<Product>();
         }
-
-        public int Id { get; set; }
-
-        [MaxLength(50)]
-        public string Name { get; set; }
-
-        [MaxLength(50)]
-        public string Alias { get; set; }
         public Nullable<int> Level { get; set; }
-        public Nullable<bool> Approve { get; set; }
-        public virtual ICollection<Product_Category> Product_Category { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Project> Projects { get; set; }
     }
 }

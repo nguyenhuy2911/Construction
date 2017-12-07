@@ -197,32 +197,60 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Models\Category\CategoryViewModel.cs" />
+    <Compile Include="Common\DataTableJs.cs" />
+    <Compile Include="Common\enum\ACTIVE_TYPE.cs" />
+    <Compile Include="Common\Extensions\PagingExtensions.cs" />
+    <Compile Include="Common\Helper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Core\Page.cs" />
+    <Compile Include="Core\Result.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\Category_Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\asset\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\asset\css\buttons.bootstrap.min.css" />
     <Content Include="Areas\Admin\asset\css\custom.css" />
+    <Content Include="Areas\Admin\asset\css\dataTables.bootstrap.min.css" />
     <Content Include="Areas\Admin\asset\css\daterangepicker.css" />
+    <Content Include="Areas\Admin\asset\css\fixedHeader.bootstrap.min.css" />
     <Content Include="Areas\Admin\asset\css\font-awesome.min.css" />
     <Content Include="Areas\Admin\asset\css\nprogress.css" />
+    <Content Include="Areas\Admin\asset\css\responsive.bootstrap.min.css" />
+    <Content Include="Areas\Admin\asset\css\scroller.bootstrap.min.css" />
     <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.svg" />
     <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\asset\js\Base.js" />
     <Content Include="Areas\Admin\asset\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\asset\js\buttons.bootstrap.js" />
+    <Content Include="Areas\Admin\asset\js\buttons.flash.js" />
+    <Content Include="Areas\Admin\asset\js\buttons.html5.js" />
+    <Content Include="Areas\Admin\asset\js\buttons.print.js" />
     <Content Include="Areas\Admin\asset\js\Chart.min.js" />
+    <Content Include="Areas\Admin\asset\js\helper.js" />
     <Content Include="Areas\Admin\asset\js\curvedLines.js" />
     <Content Include="Areas\Admin\asset\js\custom.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.bootstrap.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.buttons.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.fixedHeader.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.keyTable.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.responsive.js" />
+    <Content Include="Areas\Admin\asset\js\dataTables.scroller.js" />
     <Content Include="Areas\Admin\asset\js\date.js" />
     <Content Include="Areas\Admin\asset\js\daterangepicker.js" />
     <Content Include="Areas\Admin\asset\js\fastclick.js" />
+    <Content Include="Areas\Admin\asset\js\jquery.dataTables.js" />
     <Content Include="Areas\Admin\asset\js\jquery.flot.js" />
     <Content Include="Areas\Admin\asset\js\jquery.flot.orderBars.js" />
     <Content Include="Areas\Admin\asset\js\jquery.flot.pie.js" />
@@ -232,8 +260,10 @@
     <Content Include="Areas\Admin\asset\js\jquery.flot.time.js" />
     <Content Include="Areas\Admin\asset\js\jquery.min.js" />
     <Content Include="Areas\Admin\asset\js\jquery.sparkline.min.js" />
+    <Content Include="Areas\Admin\asset\js\jszip.js" />
     <Content Include="Areas\Admin\asset\js\moment.min.js" />
     <Content Include="Areas\Admin\asset\js\nprogress.js" />
+    <Content Include="Areas\Admin\asset\js\responsive.bootstrap.js" />
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
@@ -292,7 +322,6 @@
     <Content Include="asset\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="asset\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\asset\fonts\glyphicons-halflings-regular.eot" />
@@ -304,18 +333,6 @@
     <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.woff" />
     <Content Include="Areas\Admin\asset\fonts\fontawesome-webfont.woff2" />
     <Content Include="Areas\Admin\asset\fonts\FontAwesome.otf" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -356,12 +373,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LeftContainer.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_TopContainer.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Footer.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Construction.Domain\Construction.Domain.csproj">

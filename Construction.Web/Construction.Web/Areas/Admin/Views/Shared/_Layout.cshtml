@@ -1,40 +1,89 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gentelella Alela! | </title>
+    <!-- Bootstrap -->
+    <link href="~/Areas/Admin/asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Areas/Admin/asset/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Areas/Admin/asset/css/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/Areas/Admin/asset/css/daterangepicker.css" rel="stylesheet">   
+    <!-- Datatables -->
+    <link href="~/Areas/Admin/asset/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/asset/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/asset/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/asset/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/asset/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/Areas/Admin/asset/css/custom.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="~/Areas/Admin/asset/js/jquery.min.js"></script>
+    <!-- Global js -->
+    <script src="~/Areas/Admin/asset/js/Base.js"></script>
+    <script src="~/Areas/Admin/asset/js/helper.js"></script>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            @Html.Partial("~/Areas/Admin/Views/Shared/_LeftContainer.cshtml")
+            @Html.Partial("~/Areas/Admin/Views/Shared/_TopContainer.cshtml")
+            <div class="right_col" role="main">
+                @RenderBody()
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
+            @Html.Partial("~/Areas/Admin/Views/Shared/_Footer.cshtml")
         </div>
     </div>
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+   
+    <!-- Bootstrap -->
+    <script src="~/Areas/Admin/asset/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Areas/Admin/asset/js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Areas/Admin/asset/js/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Areas/Admin/asset/js/Chart.min.js"></script>
+    <!-- jQuery Sparklines -->
+    <script src="~/Areas/Admin/asset/js/jquery.sparkline.min.js"></script>
+    <!-- Flot -->
+    <script src="~/Areas/Admin/asset/js/jquery.flot.js"></script>
+    <script src="~/Areas/Admin/asset/js/jquery.flot.pie.js"></script>
+    <script src="~/Areas/Admin/asset/js/jquery.flot.time.js"></script>
+    <script src="~/Areas/Admin/asset/js/jquery.flot.stack.js"></script>
+    <script src="~/Areas/Admin/asset/js/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Areas/Admin/asset/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Areas/Admin/asset/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Areas/Admin/asset/js/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Areas/Admin/asset/js/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Areas/Admin/asset/js/moment.min.js"></script>
+    <script src="~/Areas/Admin/asset/js/daterangepicker.js"></script>
+    <!-- Datatables -->
+    <script src="~/Areas/Admin/asset/js/jquery.dataTables.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.bootstrap.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.buttons.js"></script>
+    <script src="~/Areas/Admin/asset/js/buttons.bootstrap.js"></script>
+    <script src="~/Areas/Admin/asset/js/buttons.flash.js"></script>
+    <script src="~/Areas/Admin/asset/js/buttons.html5.js"></script>
+    <script src="~/Areas/Admin/asset/js/buttons.print.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.fixedHeader.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.keyTable.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.responsive.js"></script>
+    <script src="~/Areas/Admin/asset/js/responsive.bootstrap.js"></script>
+    <script src="~/Areas/Admin/asset/js/dataTables.scroller.js"></script>
+    <script src="~/Areas/Admin/asset/js/jszip.js"></script>
+    <!-- Custom Theme Scripts -->
+    
+    <script src="~/Areas/Admin/asset/js/custom.js"></script>
 </body>
 </html>
