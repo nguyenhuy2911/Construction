@@ -8,6 +8,6 @@ namespace Construction.Web.Service
 {
     public class BaseService
     {
-        public DatabaseContext db = DatabaseContext.Create();
+        
     }
 }

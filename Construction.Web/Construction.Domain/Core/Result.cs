@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Construction.Web.Core
+namespace Construction.Domain.Core
 {
     public class Result<T>
     {

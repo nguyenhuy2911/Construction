@@ -87,11 +87,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\ApplicationSignInManager.cs" />
+    <Compile Include="Core\Page.cs" />
+    <Compile Include="Core\Result.cs" />
+    <Compile Include="Extensions\PagingExtensions.cs" />
     <Compile Include="Infrastructure\ApplicationUserDbContext.cs" />
     <Compile Include="Core\ApplicationUserManager.cs" />
     <Compile Include="Infrastructure\DataContextDBInitializer.cs" />
     <Compile Include="Core\EmailService.cs" />
     <Compile Include="Core\SmsService.cs" />
+    <Compile Include="Core\DataBaseManager.cs" />
     <Compile Include="Models\AspIdentityUser\Role.cs" />
     <Compile Include="Models\AspIdentityUser\User.cs" />
     <Compile Include="Models\AspIdentityUser\UserClaim.cs" />

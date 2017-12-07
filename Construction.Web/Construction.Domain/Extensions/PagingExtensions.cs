@@ -1,10 +1,11 @@
-﻿using Construction.Web.Core;
+﻿
+using Construction.Domain.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Construction.Web.Common.Extensions
+namespace Construction.Domain.Extensions
 {
     public static class PagingExtensions
     {

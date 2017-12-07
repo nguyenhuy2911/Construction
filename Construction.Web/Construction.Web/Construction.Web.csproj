@@ -202,12 +202,9 @@
     <Compile Include="Areas\Admin\Models\Category\CategoryViewModel.cs" />
     <Compile Include="Common\DataTableJs.cs" />
     <Compile Include="Common\enum\ACTIVE_TYPE.cs" />
-    <Compile Include="Common\Extensions\PagingExtensions.cs" />
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Core\Page.cs" />
-    <Compile Include="Core\Result.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
