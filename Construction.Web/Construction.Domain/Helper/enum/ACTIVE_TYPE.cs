@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Construction.Web.Common.Enum
+namespace Construction.Domain.Helper.Enum
 {
     public enum ACTIVE_TYPE
     {

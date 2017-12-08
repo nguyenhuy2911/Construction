@@ -1,4 +1,5 @@
-﻿using Construction.Web.Common;
+﻿using Construction.Domain.Core;
+using Construction.Domain.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Construction.Web.Areas.Admin.Models.Category
             GridHeader = DataTableGridHelper.GetHeaderJson<Category_Grid_Column>();
         }
         public string GridHeader { get; set; }
+        public Page Page { get; set; }
     }
     public class Category_Grid_Column
     {
@@ -28,7 +30,7 @@ namespace Construction.Web.Areas.Admin.Models.Category
         [TableHeader(title ="Trạng thái")]
         public int Status { get; set; }
 
-        [TableHeader(title = "")]
+        [TableHeader(title = "", className = "text-center")]
         public int Action { get; set; }
     }
 }

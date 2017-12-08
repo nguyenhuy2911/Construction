@@ -7,12 +7,12 @@ using System.Web.Mvc;
 namespace Construction.Web.Areas.Admin.Controllers
 {
     
-    public class HomeController : Controller
+    public class DashBoardController : Controller
     {
         // GET: Admin/Home
         public ActionResult Index()
         {
-            return View();
+            return View("~/Areas/Admin/Views/DashBoard/Index.cshtml");
         }
 
         // GET: Admin/Home/Details/5

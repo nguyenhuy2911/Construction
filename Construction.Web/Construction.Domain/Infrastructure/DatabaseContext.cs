@@ -22,6 +22,11 @@ namespace Construction.Domain.Infrastructure
             return _dataContext ?? (_dataContext = new DatabaseContext());
         }
 
+        public virtual void Commit()
+        {
+            base.SaveChanges();
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Service> Services { get; set; }

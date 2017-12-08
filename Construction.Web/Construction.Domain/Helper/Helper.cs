@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 
-namespace Construction.Web.Common
+namespace Construction.Domain.Helper
 {
     public static class Helper
     {

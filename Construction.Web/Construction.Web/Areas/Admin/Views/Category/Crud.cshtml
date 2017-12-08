@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model Construction.Web.Areas.Admin.Models.Category.CategoryCrudViewModel
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Thêm mới danh mục</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" action="/admin/danh-muc/save" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                    @Html.HiddenFor(p => p.Id)
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            Tên danh mục <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            Kích hoạt
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.HiddenFor(p=>p.Status)
+                            @{ 
+                                string _checked = Model.Active ? "checked" : "";
+                            }
+                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked  type="checkbox">
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-left">
+                            <a href="/admin/danh-muc" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Quay lại</a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                            <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> làm mới</button>
+                            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Lưu</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var ACTIVE_TYPE = {
+        BLOCK: 0,
+        ACTIVE: 1
+    }
+    $(function () {
+        
+        $('#chk-status').bootstrapToggle({
+            on: 'Đã kích hoạt',
+            off: 'Khóa'
+        });
+        $('#chk-status').change(function () {
+            if ($(this).prop('checked') == true)
+                $("#Status").val(ACTIVE_TYPE.ACTIVE)            
+            else
+                $("#Status").val(ACTIVE_TYPE.BLOCK)
+        })
+    })
+
+</script>
+

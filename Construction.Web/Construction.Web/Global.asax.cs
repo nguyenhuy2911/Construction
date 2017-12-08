@@ -13,8 +13,7 @@ namespace Construction.Web
         protected void Application_Start()
         {
            
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);            
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

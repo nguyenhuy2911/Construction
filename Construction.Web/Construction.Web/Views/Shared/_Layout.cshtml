@@ -72,24 +72,7 @@
 <body class="home page page-id-203 page-template page-template-page-home-php">
     <div id="motopress-main" class="main-holder">
         <header class="motopress-wrapper header">
-            <div class="container">
-                <div class="row">
-                    <div class="span12" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header" data-motopress-id="5a0304814285c">
-                        <div class="row">
-                            <div class="span3" data-motopress-type="static" data-motopress-static-file="static/static-logo.php">
-                                <div class="logo pull-left">
-                                    <a href="/" class="logo_h logo_h__img">
-                                        <img src="~/asset/images/logo.png" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span9" data-motopress-type="static" data-motopress-static-file="static/static-nav.php">
-                                @Html.Partial("~/Views/Shared/_NavBar.cshtml")
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @Html.Action("NaviBar", "Navigation")
         </header>
         <div class="motopress-wrapper content-holder clearfix">
             @RenderBody()

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Construction.Domain.Extensions;
 namespace Construction.Domain.Core
 {
-    public class DataBaseManager<T> where T :class
+    public class DataBaseManager<T> where T : class
     {
         private static DataBaseManager<T> databaseManager;
         private static DatabaseContext dataContext = DatabaseContext.Create();
@@ -21,7 +21,7 @@ namespace Construction.Domain.Core
             dbset = dataContext.Set<T>();
         }
         public static DataBaseManager<T> Create()
-        {           
+        {
             return databaseManager ?? (databaseManager = new DataBaseManager<T>());
         }
         public virtual void Add(T entity)
@@ -66,6 +66,11 @@ namespace Construction.Domain.Core
                 TotalRow = totalRow
             };
             return result;
+        }
+
+        public int Save()
+        {
+            return dataContext.SaveChanges();
         }
 
     }

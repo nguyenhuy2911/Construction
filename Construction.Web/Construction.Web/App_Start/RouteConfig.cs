@@ -13,7 +13,14 @@ namespace Construction.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapMvcAttributeRoutes();
-                       
+            AreaRegistration.RegisterAllAreas();
+
+            routes.MapRoute(
+               name: "Admin",
+               url: "admin",
+               defaults: new { controller = "DashBoard", action = "Index", id = UrlParameter.Optional },
+               namespaces: new[] { "Construction.Web.Areas.Admin.Controllers" }
+            );
 
             routes.MapRoute(
                name: "About",
