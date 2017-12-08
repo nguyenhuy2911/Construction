@@ -4,33 +4,31 @@
     Layout = null;
 }
 @model Construction.Web.Models.Navigation.NavigationViewModel
-<!-- BEGIN MAIN NAVIGATION -->
+
 <nav class="nav nav__primary clearfix">
     <ul id="topnav" class="sf-menu sf-js-enabled">
-        <li id="menu-item-1807" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
             <a href="/">Trang chủ</a>
         </li>
-        <li id="menu-item-1810" class="menu-item menu-item-type-post_type menu-item-object-page">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
             <a href="/gioi-thieu">Giới thiệu</a>
         </li>
-        <li id="menu-item-1809" class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="#">Dịch vụ</a>
-            <ul class="sub-menu" style="visibility: hidden;">
-                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Gallery 2</a></li>
-                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="#">Gallery 3</a>
-                    <ul class="sub-menu" style="visibility: hidden;">
-                        <li id="menu-item-1883" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 1</a></li>
-                        <li id="menu-item-1882" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 2</a></li>
-                        <li id="menu-item-1881" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 3</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Gallery 4</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="#">Dịch vụ <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="sub-menu">
+                @{
+                    foreach (var item in Model.ListService)
+                    {
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="#">@item.Name</a>
+                        </li>
+                    }
+                }
             </ul>
         </li>
-        <li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="#">Sản phẩm</a>
-            <ul class="sub-menu" style="visibility: hidden;">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="#">Sản phẩm <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="sub-menu">
                 @{
                     foreach (var item in Model.Categories)
                     {
@@ -41,23 +39,21 @@
                 }
             </ul>
         </li>
-        <li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="#">Dự án</a>
-            <ul class="sub-menu" style="visibility: hidden;">
-                <li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Gallery 2</a></li>
-                <li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="#">Gallery 3</a>
-                    <ul class="sub-menu" style="visibility: hidden;">
-                        <li id="menu-item-1883" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 1</a></li>
-                        <li id="menu-item-1882" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 2</a></li>
-                        <li id="menu-item-1881" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Category 3</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-1813" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">Gallery 4</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="#">Dự án <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="sub-menu">
+                @{
+                    foreach (var item in Model.Categories)
+                    {
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="#">@item.Name</a>
+                        </li>
+                    }
+                }
             </ul>
         </li>
-        <li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page">
             <a href="/lien-he">Liên hệ</a>
         </li>
     </ul>
-</nav><!-- END MAIN NAVIGATION -->
+</nav>

@@ -9,5 +9,6 @@ namespace Construction.Web.Models.Navigation
     public class NavigationViewModel
     {
         public List<Category> Categories { get; set; }
+        public List<Construction.Domain.Models.Service> ListService { get; set; }
     }
 }

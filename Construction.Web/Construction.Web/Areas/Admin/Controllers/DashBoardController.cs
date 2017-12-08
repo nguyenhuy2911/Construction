@@ -9,7 +9,7 @@ namespace Construction.Web.Areas.Admin.Controllers
     
     public class DashBoardController : Controller
     {
-        // GET: Admin/Home
+        [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
             return View("~/Areas/Admin/Views/DashBoard/Index.cshtml");

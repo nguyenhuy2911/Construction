@@ -1,5 +1,5 @@
-﻿using Construction.Domain.Core;
-using Construction.Web.Areas.Admin.Models.Category;
+﻿using Construction.Web.Areas.Admin.Models.Project;
+using Construction.Web.Areas.Admin.Models.Service;
 using Construction.Web.Service;
 using Newtonsoft.Json;
 using System;
@@ -11,28 +11,28 @@ using System.Web.Mvc;
 namespace Construction.Web.Areas.Admin.Controllers
 {
     [RouteArea("admin")]
-    [RoutePrefix("danh-muc")]
-    public class CategoryController : Controller
+    [RoutePrefix("du-an")]
+    public class ProjectController : Controller
     {
-        private Category_Service _category_Service { get; set; }
-        public CategoryController()
+        private Project_Service _project_Service { get; set; }
+        public ProjectController()
         {
-            this._category_Service = new Category_Service();
+            this._project_Service = new Project_Service();
         }
-
         [Route]
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
-            var model = new CategoryViewModel();
+            var model = new ProjectViewModel();
+            ViewBag.Title = "Danh sách dự án";
             return View(model);
         }
 
         [HttpPost]
         [Route("get-list")]
-        public string Categories(CategoryViewModel model)
+        public string GetServices(ProjectViewModel model)
         {
-            var data = _category_Service.GetCategories(model.Page);
+            var data = _project_Service.GetPojects(model.Page);
             string jsonData = JsonConvert.SerializeObject(data);
             return jsonData;
         }
@@ -42,8 +42,9 @@ namespace Construction.Web.Areas.Admin.Controllers
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Create()
         {
-            var model = new CategoryCrudViewModel();
-            return View("~/Areas/Admin/Views/Category/Crud.cshtml", model);
+            var model = new ProjectCrudViewModel();
+            ViewBag.Title = "Thêm mới dự án";
+            return View("~/Areas/Admin/Views/Project/Crud.cshtml", model);
         }
 
         [HttpGet]
@@ -51,24 +52,25 @@ namespace Construction.Web.Areas.Admin.Controllers
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Edit(int id)
         {
-            var model = new CategoryCrudViewModel();
-            model = _category_Service.Find(id);
-            return View("~/Areas/Admin/Views/Category/Crud.cshtml", model);
+            var model = new ProjectCrudViewModel();
+            model = _project_Service.Find(id);
+            ViewBag.Title = "Cập nhật dự án";
+            return View("~/Areas/Admin/Views/Project/Crud.cshtml", model);
         }
 
         [HttpPost]
         [Route("save")]
-        public ActionResult Save(CategoryCrudViewModel model)
+        public ActionResult Save(ProjectCrudViewModel model)
         {
             int id = 0;
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
-                id = _category_Service.UpdateCategory(model);
+                id = _project_Service.UpdatePoject(model);
             }
             else
             {
-                id = _category_Service.CreateCategory(model);
-                
+                id = _project_Service.CreateProject(model);
+
             }
             return RedirectToAction("Edit", new { id = id });
         }

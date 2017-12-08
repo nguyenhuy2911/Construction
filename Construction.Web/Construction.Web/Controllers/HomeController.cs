@@ -9,6 +9,7 @@ namespace Construction.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {          
             return View();

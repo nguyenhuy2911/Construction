@@ -1,5 +1,5 @@
 ﻿using Construction.Web.Models.Navigation;
-using Construction.Web.Service.Fronend;
+using Construction.Web.Service.FrontEnd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +16,7 @@ namespace Construction.Web.Controllers
             this._navService = new Navigation_Service();
         }
 
+        [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult NaviBar()
         {
             var model = new NavigationViewModel();

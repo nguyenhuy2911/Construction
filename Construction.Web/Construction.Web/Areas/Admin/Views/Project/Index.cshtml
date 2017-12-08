@@ -2,7 +2,7 @@
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-@model Construction.Web.Areas.Admin.Models.Service.ServiceViewModel
+@model Construction.Web.Areas.Admin.Models.Project.ProjectViewModel
 
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
@@ -10,7 +10,7 @@
             <h2>@ViewBag.Title </h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li>
-                    <a href="/admin/dich-vu/them-moi"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Thêm</a>
+                    <a href="/admin/du-an/them-moi"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Thêm</a>
                 </li>
                 <li>
                     <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -35,28 +35,28 @@
 
 <script>
     var columnGrid = htmlDecode('@Model.GridHeader');
-    var _service = null;
+    var _project = null;
 
-    var SERVICE = function () {
+    var PROJECT = function () {
         this.variable = {
             pageIndex: 0,
             pageSize: 10
         };
         this.DataTables = null;
     }
-    SERVICE.prototype = new Base();
+    PROJECT.prototype = new Base();
 
-    SERVICE.prototype.init = function () {
+    PROJECT.prototype.init = function () {
         this.regisEvent();
         this.getList();
     }
 
-    SERVICE.prototype.regisEvent = function () {
+    PROJECT.prototype.regisEvent = function () {
         var $this = this;
 
     }
 
-    SERVICE.prototype.getList = function () {
+    PROJECT.prototype.getList = function () {
         var $this = this;
         var page = new Page(0, 10);
         var column = JSON.parse(columnGrid);
@@ -92,7 +92,7 @@
             keys: true,
             columns: column,
             ajax: {
-                url: '/admin/dich-vu/get-list',
+                url: '/admin/du-an/get-list',
                 dataType: "json",
                 type: 'POST',
                 data: function () {
@@ -122,7 +122,7 @@
     }
 
     $(function () {
-        _service = new SERVICE();
-        _service.init();
+        _project = new PROJECT();
+        _project.init();
     });
 </script>

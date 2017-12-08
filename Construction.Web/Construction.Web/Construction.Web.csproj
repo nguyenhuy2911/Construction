@@ -199,9 +199,12 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
     <Compile Include="Areas\Admin\Models\Category\CategoryCrudViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Category\CategoryViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Project\ProjectCrudViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Project\ProjectViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Service\ServiceCrudViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Service\ServiceViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -215,8 +218,10 @@
     <Compile Include="Models\Navigation\NavigationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\Project_Service.cs" />
     <Compile Include="Service\Category_Service.cs" />
     <Compile Include="Service\Fronend\Navigation_Service.cs" />
+    <Compile Include="Service\Service_Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -503,6 +508,8 @@
     <Content Include="Areas\Admin\Views\Category\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Service\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Service\Crud.cshtml" />
+    <Content Include="Areas\Admin\Views\Project\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Project\Crud.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Navigation\NaviBar.cshtml" />
   </ItemGroup>
