@@ -133,3 +133,16 @@ E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Newto
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.dll
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.pdb
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Helpers.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Mvc.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Razor.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Helpers.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Mvc.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Razor.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.xml

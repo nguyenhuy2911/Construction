@@ -21,7 +21,10 @@ namespace Construction.Web.Areas.Admin.Models.Project
         [TableHeader(title = "Id")]
         public string Id { get; set; }
 
-        [TableHeader(title = "Tên danh mục")]
+        [TableHeader(title = "Hình")]
+        public string Thumbnail { get; set; }
+
+        [TableHeader(title = "Tên dự án")]
         public string Name { get; set; }
 
         [TableHeader(title = "Alias")]

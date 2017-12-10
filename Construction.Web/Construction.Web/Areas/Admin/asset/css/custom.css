@@ -5083,3 +5083,8 @@ table.table-bordered.dataTable th {
 label.toggle-off{
     margin-right:0px;
 }
+
+.thumb-edit.dropzone .dz-preview .dz-image{
+    width:250px;
+    height:250px;
+}

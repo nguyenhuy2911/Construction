@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Http;
+using Newtonsoft.Json;
 
 namespace Construction.Web
 {
@@ -12,10 +14,16 @@ namespace Construction.Web
     {
         protected void Application_Start()
         {
-           
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);            
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+               // Formatting = Newtonsoft.Json.Formatting.Indented,
+                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            };
         }
     }
 }

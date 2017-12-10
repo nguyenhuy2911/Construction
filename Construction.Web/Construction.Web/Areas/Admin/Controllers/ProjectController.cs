@@ -63,16 +63,27 @@ namespace Construction.Web.Areas.Admin.Controllers
         public ActionResult Save(ProjectCrudViewModel model)
         {
             int id = 0;
+           
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
                 id = _project_Service.UpdatePoject(model);
             }
             else
-            {
+            {              
                 id = _project_Service.CreateProject(model);
 
             }
             return RedirectToAction("Edit", new { id = id });
+        }
+
+        [HttpPost]
+        [Route("save-image")]
+        public int SaveImage(int id)
+        {
+            var model = _project_Service.Find(id);
+            model.FileCollection = Request.Files;
+            _project_Service.UpdatePoject(model);
+            return 0;
         }
     }
 }

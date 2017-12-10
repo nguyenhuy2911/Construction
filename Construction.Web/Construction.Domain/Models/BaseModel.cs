@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace Construction.Domain.Models
 {
@@ -29,6 +30,8 @@ namespace Construction.Domain.Models
 
         [MaxLength(250)]
         public string ShortDescription { get; set; }
+
+        [AllowHtml]
         public string Description { get; set; }
 
         [MaxLength(50)]

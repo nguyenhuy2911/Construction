@@ -7,6 +7,9 @@ using Construction.Domain.Core;
 using Construction.Web.Areas.Admin.Models.Category;
 using Construction.Domain.Helper;
 using Construction.Web.Areas.Admin.Models.Project;
+using Construction.Web.Common;
+using System.Data.Entity.Core;
+using System.Net;
 
 namespace Construction.Web.Service
 {
@@ -15,7 +18,19 @@ namespace Construction.Web.Service
         private readonly DataBaseManager<Project> _projectManager = DataBaseManager<Project>.Create();
         public Result<List<Project>> GetPojects(Page page)
         {
-            return _projectManager.GetAll(page, p=> p.Id);
+            try
+            {
+                return _projectManager.GetAll(page, p => p.Id);
+            }
+            catch (EntityException ex)
+            {
+                return new Result<List<Project>>();
+            }
+            catch (Exception ex)
+            {
+                return new Result<List<Project>>();
+            }
+
         }
         public ProjectCrudViewModel Find(int id)
         {
@@ -31,33 +46,52 @@ namespace Construction.Web.Service
         {
             try
             {
-                var _createData = new Project();
-                _createData.Name = model.Name;
-                _createData.Alias = model.Name.GenerateFriendlyName();
-                _createData.Status = model.Status;
-                _projectManager.Add(_createData);
+                var _saveData = new Project();
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.CategoryId = 2;
+                _saveData.ServiceId = 2;
+                _saveData.Description = WebUtility.HtmlEncode(model.Description);
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _projectManager.Add(_saveData);
                 _projectManager.Save();
-                return _createData.Id;
+                return _saveData.Id;
+            }
+            catch (EntityException ex)
+            {
+                return 0;
             }
             catch (Exception ex)
             {
 
                 return 0;
             }
-            
+
         }
         public int UpdatePoject(ProjectCrudViewModel model)
         {
             try
             {
-                var _updateData = new Project();
-                _updateData = _projectManager.GetById(model.Id);
-                _updateData.Name = model.Name;
-                _updateData.Alias = model.Name.GenerateFriendlyName();
-                _updateData.Status = model.Status;
-                _projectManager.Update(_updateData);
+                var _saveData = new Project();
+                _saveData = _projectManager.GetById(model.Id);
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.Description = WebUtility.HtmlEncode(model.Description);
+                _saveData.Thumbnail = string.Format("{0}.{1}", _saveData.Alias, "png");
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _projectManager.Update(_saveData);
                 _projectManager.Save();
-                return _updateData.Id;
+                if (model.FileCollection != null && model.FileCollection.Count > 0)
+                    UploadFile.UploadProjectImage(model.FileCollection, _saveData.Alias, _saveData.Id.ToString());
+                return _saveData.Id;
+            }
+            catch (EntityException ex)
+            {
+                return 0;
             }
             catch (Exception ex)
             {
