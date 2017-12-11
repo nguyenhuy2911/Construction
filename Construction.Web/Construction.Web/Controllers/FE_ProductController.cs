@@ -1,4 +1,5 @@
-﻿using Construction.Web.Service.FrontEnd;
+﻿using Construction.Domain.Core;
+using Construction.Web.Service.FrontEnd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,11 @@ namespace Construction.Web.Controllers
         {
             this._product_Service = new FEProduct_Service();
         }
-        public ActionResult Index()
+        public ActionResult Index(int pageNumber = 0)
         {
-            return View();
+            var page = new Page(pageNumber, 10);
+            var model = _product_Service.GetItems(page);
+            return View(model);
         }
 
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]

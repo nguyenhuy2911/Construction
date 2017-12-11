@@ -23,5 +23,11 @@ namespace Construction.Web.Controllers
             model = _navService.GetNavigationViewModel();
             return View(model);
         }
+
+        public ActionResult Breadcrumb()
+        {
+           
+            return View();
+        }
     }
 }

@@ -950,8 +950,8 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 
 .title-section {
-    margin: 13px 0 10px;
-    padding: 0;
+    /*margin: 13px 0 10px;
+    padding: 0;*/
     text-align: left;
     background: none;
 }

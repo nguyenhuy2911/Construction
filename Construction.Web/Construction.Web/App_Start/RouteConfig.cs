@@ -23,6 +23,13 @@ namespace Construction.Web
             );
 
             routes.MapRoute(
+               name: "san-pham",
+               url: "san-pham",
+               defaults: new { controller = "FE_Product", action = "Index", pageNumber = UrlParameter.Optional },
+               namespaces: new[] { "Construction.Web.Controllers" }
+           );
+
+            routes.MapRoute(
                name: "About",
                url: "gioi-thieu",
                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional },

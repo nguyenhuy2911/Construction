@@ -221,7 +221,7 @@ a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-ind
 }
 .title-section { padding:20px 0 0; }
 .title-header {
-	overflow:hidden;
+	/*overflow:hidden;*/
 	margin-bottom:1em;
 	word-wrap:break-word;
 	-webkit-hyphens:auto;

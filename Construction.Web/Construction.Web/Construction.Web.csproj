@@ -277,8 +277,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FE_Product\Product_ItemsViewModel.cs" />
     <Compile Include="Models\FE_Product\Product_HomeItemsViewModel.cs" />
     <Compile Include="Models\FE_Project\Project_HomeItemsViewModel.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Navigation\NavigationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1551,6 +1553,9 @@
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Crud.cshtml" />
     <Content Include="Views\FE_Product\_HomeItems.cshtml" />
+    <Content Include="Views\FE_Product\Index.cshtml" />
+    <Content Include="Views\Navigation\Breadcrumb.cshtml" />
+    <Content Include="Views\_Partial\Items.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
