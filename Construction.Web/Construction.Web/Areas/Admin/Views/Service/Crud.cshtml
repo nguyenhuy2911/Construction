@@ -9,6 +9,12 @@
             <div class="x_title">
                 <h2>@ViewBag.Title</h2>
                 <ul class="nav navbar-right panel_toolbox">
+                    @if (Model.Id > 0)
+                    {
+                        <li>
+                            <a href="/admin/dich-vu/them-moi"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Thêm</a>
+                        </li>
+                    }
                     <li>
                         <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -35,11 +41,11 @@
                             Kích hoạt
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            @Html.HiddenFor(p=>p.Status)
-                            @{ 
+                            @Html.HiddenFor(p => p.Status)
+                            @{
                                 string _checked = Model.Active ? "checked" : "";
                             }
-                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked  type="checkbox">
+                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -64,14 +70,14 @@
         ACTIVE: 1
     }
     $(function () {
-        
+
         $('#chk-status').bootstrapToggle({
             on: 'Đã kích hoạt',
             off: 'Khóa'
         });
         $('#chk-status').change(function () {
             if ($(this).prop('checked') == true)
-                $("#Status").val(ACTIVE_TYPE.ACTIVE)            
+                $("#Status").val(ACTIVE_TYPE.ACTIVE)
             else
                 $("#Status").val(ACTIVE_TYPE.BLOCK)
         })

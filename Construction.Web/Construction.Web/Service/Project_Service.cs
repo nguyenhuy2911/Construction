@@ -70,7 +70,7 @@ namespace Construction.Web.Service
             }
 
         }
-        public int UpdatePoject(ProjectCrudViewModel model)
+        public int UpdateProject(ProjectCrudViewModel model)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Construction.Web.Service
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
-                _saveData.Thumbnail = string.Format("{0}.{1}", _saveData.Alias, "png");
+                _saveData.Thumbnail = string.Format("{0}/{1}.{2}", _saveData.Id, _saveData.Alias, "png");
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
                 _projectManager.Update(_saveData);

@@ -66,7 +66,7 @@ namespace Construction.Web.Areas.Admin.Controllers
            
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
-                id = _project_Service.UpdatePoject(model);
+                id = _project_Service.UpdateProject(model);
             }
             else
             {              
@@ -82,7 +82,7 @@ namespace Construction.Web.Areas.Admin.Controllers
         {
             var model = _project_Service.Find(id);
             model.FileCollection = Request.Files;
-            _project_Service.UpdatePoject(model);
+            _project_Service.UpdateProject(model);
             return 0;
         }
     }

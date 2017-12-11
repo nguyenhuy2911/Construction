@@ -58,7 +58,7 @@ namespace Construction.Domain.Core
         }
         public virtual Result<List<T>> GetPage<TOrder>(Page page, Expression<Func<T, bool>> where, Expression<Func<T, TOrder>> order)
         {
-            var data = dbset.OrderBy(order).Where(where).GetPage(page).ToList();
+            var data = dbset.OrderByDescending(order).Where(where).GetPage(page).ToList();
             var totalRow = dbset.Count(where);
             var result = new Result<List<T>>
             {

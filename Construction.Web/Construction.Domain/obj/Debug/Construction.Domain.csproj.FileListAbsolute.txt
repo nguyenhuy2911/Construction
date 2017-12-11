@@ -146,3 +146,16 @@ E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Syste
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.xml
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Helpers.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Mvc.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Razor.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Helpers.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Mvc.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.Razor.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.xml

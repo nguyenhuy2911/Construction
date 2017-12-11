@@ -21,5 +21,15 @@ namespace Construction.Web.Common
                 file.UploadImage(fileName, path);
             }
         }
+
+        public static void UploadProductImage(HttpFileCollectionBase fileCollection, string fileName, string uniqueFolder)
+        {
+            foreach (string _fileName in fileCollection)
+            {
+                HttpPostedFileBase file = fileCollection[_fileName];
+                string path = string.Format(@"~\uploads\images\product\{0}", uniqueFolder);
+                file.UploadImage(fileName, path);
+            }
+        }
     }
 }

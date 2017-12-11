@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+@model Construction.Web.Models.Product_HomeItemsViewModel
+@using Construction.Web.Common
+@{
+    int itemPerRow = 3;
+    decimal row = (decimal)Model.Items.Count / (decimal)itemPerRow;
+    row = Math.Ceiling(row);
+}
+<div class="row">
+    <div class="span12">
+        <h1>Sản phẩm</h1>
+        @for (int i = 0; i < row; i++)
+        {
+            <ul class="posts-grid row-fluid unstyled gallery-home">
+                @for (int j = 0; j < itemPerRow; j++)
+                {
+                    int index = itemPerRow * i + j;
+                    if (index >= Model.Items.Count)
+                    {
+                        break;
+                    }
+                    <li class="span4">
+                        <figure class="featured-thumbnail thumbnail">
+                            <a href="#" title="@Model.Items[index].Name">
+                                <img src="@Url.ProductImgUrl(Model.Items[index].Thumbnail)" alt="@Model.Items[index].Name" style="width:390px; height:297px;">
+                                <span class="zoom-icon"></span>
+                            </a>
+                        </figure>
+                        <div class="clear"></div>
+                        <div class="desc">
+                            <div class="title-part">
+                                <h5>
+                                    <a href="#" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
+                                </h5><p class="excerpt">@Model.Items[index].ShortDescription ... </p>
+                            </div>
+                            <div class="price">$343`000</div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
+        <a href="#/" title="view all projects" class="btn btn-default btn-normal btn-inline btn-margin-top pull-right" target="_self">
+            <i class="fa fa-hand-o-right" aria-hidden="true"></i> Xem tất cả sản phẩm
+        </a>
+    </div>
+</div>
+<div class="clear"></div>

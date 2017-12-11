@@ -11,32 +11,32 @@ body {
 }
 
 h1 {
-    font: normal 100px/100px Jockey One;
+    font: normal 100px/90px Oswald;
     color: #2f2f2f;
 }
 
 h2 {
-    font: normal 60px/60px Jockey One;
+    font: normal 60px/60px Oswald;
     color: #2f2f2f;
 }
 
 h3 {
-    font: normal 50px/50px Jockey One;
+    font: normal 50px/50px Oswald;
     color: #2f2f2f;
 }
 
 h4 {
-    font: normal 40px/40px Jockey One;
+    font: normal 40px/40px Oswald;
     color: #2f2f2f;
 }
 
 h5 {
-    font: normal 30px/30px Jockey One;
+    font: normal 30px/30px Oswald;
     color: #2f2f2f;
 }
 
 h6 {
-    font: normal 20px/20px Jockey One;
+     font: normal 20px/20px Oswald;
     color: #2f2f2f;
 }
 
@@ -45,16 +45,16 @@ body {
 }
 
 .logo_h__txt, .logo_link {
-    font: normal 30px/36px Jockey One;
+    font: normal 30px/36px Oswald;
     color: #f7d56c;
 }
 
 .sf-menu > li > a {
-    font: normal 13px/16px Jockey One;
+    font: normal 13px/16px Oswald;
     color: #a5cabd;
 }
 
 .nav.footer-nav a {
-    font: normal 14px/18px PT Sans, sans-serif;
+    font: normal 14px/18px Oswald;
     color: #818181;
 }
