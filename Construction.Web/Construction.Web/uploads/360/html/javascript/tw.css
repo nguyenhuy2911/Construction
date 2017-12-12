@@ -1,0 +1,16 @@
+@-ms-viewport { width: device-width; }
+@media only screen and (min-device-width: 800px) { html { overflow: hidden; } }
+html body{margin:0px;padding:0px;overflow:hidden;width:100%;height:100%;-ms-touch-action: none;}
+img{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+}
+.tipText {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 3.2px rgba(0,0,0,1);
+    color: #FFFFFF;
+    text-align: center;
+}

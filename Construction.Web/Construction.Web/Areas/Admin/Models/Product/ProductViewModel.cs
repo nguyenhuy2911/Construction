@@ -24,7 +24,7 @@ namespace Construction.Web.Areas.Admin.Models.Product
         [TableHeader(title = "Hình")]
         public string Thumbnail { get; set; }
 
-        [TableHeader(title = "Tên dự án")]
+        [TableHeader(title = "Tên sản phẩm")]
         public string Name { get; set; }
 
         [TableHeader(title = "Alias")]

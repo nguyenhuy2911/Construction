@@ -80,6 +80,12 @@
 
                 }
             }
+            if (objColumn.data == "Thumbnail") {
+                objColumn.render = function (data, type, row, meta) {
+                    return '<img src="' + row.Thumbnail + '" style="width: 100px; height: 70px" />';
+
+                }
+            }
 
             columnRender.push(objColumn);
         })

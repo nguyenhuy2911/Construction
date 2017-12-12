@@ -22,6 +22,8 @@ namespace Construction.Web.Common
             }
         }
 
+        
+
         public static void UploadProductImage(HttpFileCollectionBase fileCollection, string fileName, string uniqueFolder)
         {
             foreach (string _fileName in fileCollection)
@@ -29,7 +31,14 @@ namespace Construction.Web.Common
                 HttpPostedFileBase file = fileCollection[_fileName];
                 string path = string.Format(@"~\uploads\images\product\{0}", uniqueFolder);
                 file.UploadImage(fileName, path);
-            }
+            }       
+        }
+
+        public static void UploadProduct360File(HttpPostedFileBase file, string fileName, string uniqueFolder)
+        {
+                string path = string.Format(@"~\uploads\360\product\{0}", uniqueFolder);
+                file.UploadExtractZipFile(fileName, path);
+            
         }
     }
 }

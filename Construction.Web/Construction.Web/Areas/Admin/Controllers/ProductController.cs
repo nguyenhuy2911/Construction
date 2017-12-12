@@ -2,6 +2,7 @@
 using Construction.Web.Areas.Admin.Models.Product;
 using Construction.Web.Service;
 using Newtonsoft.Json;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Construction.Web.Areas.Admin.Controllers
@@ -57,10 +58,10 @@ namespace Construction.Web.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("save")]
-        public ActionResult Save(ProductCrudViewModel model)
+        public ActionResult Save(ProductCrudViewModel model, HttpPostedFileBase File_360)
         {
             int id = 0;
-
+            model.File_360 = File_360;
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
                 id = _project_Service.UpdateProduct(model);

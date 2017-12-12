@@ -34,8 +34,7 @@ namespace Construction.Web.Service.FrontEnd
         public Product_ItemsViewModel GetItems(Page page)
         {
             int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
-            var pagination = new Pagination<Item>(page.PageNumber, page.PageSize);
-            UrlHelper url = new UrlHelper(HttpContext.Current.Request.RequestContext);
+            var pagination = new Pagination<Item>(page.PageNumber, page.PageSize);           
             var datas = _productManager.GetPage(page, p => p.Status == activeStatus, p => p.Id);
 
             if (datas != null && datas.Results != null && datas.Results.Count > 0)
@@ -46,9 +45,9 @@ namespace Construction.Web.Service.FrontEnd
                 {
                     Id = p.Id,
                     Name = p.Name,
-                    Thumbnail = url.ProductImgUrl(p.Thumbnail),
+                    Thumbnail = Url.ProductImgUrl(p.Thumbnail),
                     ShortDescription = p.ShortDescription,
-                    Link = url.RouteUrl("ProductDetail", new {alias= p.Alias, id = p.Id }) 
+                    Link = Url.RouteUrl("ProductDetail", new {alias= p.Alias, id = p.Id }) 
                 }).ToList();
             }
             return new Product_ItemsViewModel()

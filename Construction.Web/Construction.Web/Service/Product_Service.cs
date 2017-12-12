@@ -16,7 +16,21 @@ namespace Construction.Web.Service
         private readonly DataBaseManager<Product> _productManager = DataBaseManager<Product>.Create();
         public Result<List<Product>> GetProducts(Page page)
         {
-            return _productManager.GetAll(page, p => p.Id);
+            var data = _productManager.GetAll(page, p => p.Id) ?? new Result<List<Product>>();
+            if (data.Results != null && data.Results.Count > 0)
+            {
+                var listItem = data.Results.Select(p =>
+                new Product
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Alias = p.Alias,
+                    Status = p.Status,
+                    Thumbnail = Url.ProductImgUrl(p.Thumbnail),
+                }).ToList();
+                data.Results = listItem;
+            }
+            return data;
         }
         public ProductCrudViewModel Find(int id)
         {
@@ -75,6 +89,8 @@ namespace Construction.Web.Service
                 _productManager.Save();
                 if (model.FileCollection != null && model.FileCollection.Count > 0)
                     UploadFile.UploadProductImage(model.FileCollection, _saveData.Alias, _saveData.Id.ToString());
+                if (model.File_360 != null)
+                    UploadFile.UploadProduct360File(model.File_360, _saveData.Alias, _saveData.Id.ToString());
                 return _saveData.Id;
             }
             catch (EntityException ex)
