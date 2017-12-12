@@ -22,28 +22,38 @@ namespace Construction.Web.Service.FrontEnd
             };
         }
 
+        public Product_Detail_ViewModel GetDetailItem(int id)
+        {
+            var item = _productManager.GetById(id);
+            return new Product_Detail_ViewModel()
+            {
+                Item = item
+            };
+        }
+
         public Product_ItemsViewModel GetItems(Page page)
         {
             int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
-            var items = new Result<List<Item>>();
+            var pagination = new Pagination<Item>(page.PageNumber, page.PageSize);
             UrlHelper url = new UrlHelper(HttpContext.Current.Request.RequestContext);
-            var datas = _productManager.GetPage(new Page(0, 9), p => p.Status == activeStatus, p => p.Id);
+            var datas = _productManager.GetPage(page, p => p.Status == activeStatus, p => p.Id);
 
             if (datas != null && datas.Results != null && datas.Results.Count > 0)
             {
-                items.TotalRow = datas.TotalRow;
-                items.Results = datas.Results.Select(p => new Item()
+                pagination.TotalRow = datas.TotalRow;
+                pagination.Link = "san-pham";
+                pagination.Items = datas.Results.Select(p => new Item()
                 {
                     Id = p.Id,
                     Name = p.Name,
                     Thumbnail = url.ProductImgUrl(p.Thumbnail),
                     ShortDescription = p.ShortDescription,
-                    Action = "san-pam"
+                    Link = url.RouteUrl("ProductDetail", new {alias= p.Alias, id = p.Id }) 
                 }).ToList();
             }
             return new Product_ItemsViewModel()
             {
-                Items = items
+                Data = pagination
             };
         }
 

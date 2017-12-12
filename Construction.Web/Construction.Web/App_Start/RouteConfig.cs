@@ -21,20 +21,36 @@ namespace Construction.Web
                defaults: new { controller = "DashBoard", action = "Index", id = UrlParameter.Optional },
                namespaces: new[] { "Construction.Web.Areas.Admin.Controllers" }
             );
+            /* ****************************************** Product ***************************************************/
+            routes.MapRoute(
+               name: "ProductDetail",
+               url: "san-pham/{alias}-{id}",
+               defaults: new
+               {
+                   controller = "FE_Product",
+                   action = "Detail",
+                   alias = UrlParameter.Optional,
+                   id = UrlParameter.Optional
+               },
+               namespaces: new[] { "Construction.Web.Controllers" }
+            );
 
             routes.MapRoute(
-               name: "san-pham",
-               url: "san-pham",
+               name: "Product",
+               url: "san-pham/{pageNumber}",
                defaults: new { controller = "FE_Product", action = "Index", pageNumber = UrlParameter.Optional },
                namespaces: new[] { "Construction.Web.Controllers" }
-           );
+            );
 
+                     
+
+            /* ******************************************  ***************************************************/
             routes.MapRoute(
                name: "About",
                url: "gioi-thieu",
                defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional },
                namespaces: new[] { "Construction.Web.Controllers" }
-           );
+            );
 
             routes.MapRoute(
                 name: "Contact",

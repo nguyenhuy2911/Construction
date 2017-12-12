@@ -16,7 +16,6 @@ namespace Construction.Domain.Models
 
         [MaxLength(50)]
         public string Link { get; set; }
-
  
         public int CategoryId { get; set; }
 

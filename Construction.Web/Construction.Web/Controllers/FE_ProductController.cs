@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace Construction.Web.Controllers
 {
+    [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
     public class FE_ProductController : Controller
     {
         private FEProduct_Service _product_Service { get; set; }
@@ -15,18 +16,25 @@ namespace Construction.Web.Controllers
         {
             this._product_Service = new FEProduct_Service();
         }
+
+
         public ActionResult Index(int pageNumber = 0)
         {
-            var page = new Page(pageNumber, 10);
+            var page = new Page(pageNumber, 9);
             var model = _product_Service.GetItems(page);
             return View(model);
         }
 
-        [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult HomeItems()
         {
             var model = _product_Service.GetHomeItems();
             return View("~/Views/FE_Product/_HomeItems.cshtml", model);
+        }
+
+        public ActionResult Detail(string alias, int id)
+        {
+            var model = _product_Service.GetDetailItem(id);
+            return View(model);
         }
     }
 }

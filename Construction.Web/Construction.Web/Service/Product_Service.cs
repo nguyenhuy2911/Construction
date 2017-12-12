@@ -26,6 +26,8 @@ namespace Construction.Web.Service
             model.Name = _data.Name;
             model.Alias = _data.Alias;
             model.Status = _data.Status;
+            model.ShortDescription = _data.ShortDescription;
+            model.Description = _data.Description;
             return model;
         }
         public int CreateProduct(ProductCrudViewModel model)

@@ -6,7 +6,7 @@ namespace Construction.Web.Models
 {
     public class Product_ItemsViewModel
     {
-        public Result<List<Item>> Items { get; set; }
+        public Pagination<Item> Data { get; set; }
         
     }
 }

@@ -18,7 +18,7 @@ namespace Construction.Web.Models
         public string Description { get; set; }
         
         public string Alias { get; set; }
-        public string Action { get; set; }
+        public string Link { get; set; }
 
 
     }

@@ -1,0 +1,81 @@
+﻿@using Construction.Web.Models
+@model Product_Detail_ViewModel
+@{
+    ViewBag.Title = Model.Item.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span12" data-motopress-wrapper-file="single-portfolio.php" data-motopress-wrapper-type="content">
+            <div class="row">
+                <div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-title.php">
+                    <section class="title-section">
+                        <h1 class="title-header">
+                            @Model.Item.Name
+                        </h1>
+                        @Html.Action("Breadcrumb", "Navigation")
+                    </section>
+                </div>
+            </div>
+            <div id="content" class="row">
+                <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-single-portfolio.php">
+                    <!--BEGIN .hentry -->
+                    <div class="portfolio type-portfolio status-publish hentry">
+                        <div class="row">
+                            <div class="span12">
+                                @Html.Raw(WebUtility.HtmlDecode(Model.Item.Description))
+                            </div>
+
+                        </div><!-- .row -->
+                        <div class="row">
+                            <div class="span7">
+                                <div class="related-posts"><h3 class="related-posts_h">Related Posts</h3><ul class="related-posts_list clearfix"><li class="related-posts_item"><figure class="thumbnail featured-thumbnail"><a href="https://livedemo00.template-help.com/wordpress_47532/portfolio-view/vitae-dicta-sunt-explicabo/" title="vitae dicta sunt explicabo"><img alt="vitae dicta sunt explicabo" src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2013/10/Depositphotos_23613271_original-250x150.jpg"></a></figure><a href="https://livedemo00.template-help.com/wordpress_47532/portfolio-view/vitae-dicta-sunt-explicabo/">vitae dicta sunt explicabo</a></li><li class="related-posts_item"><figure class="thumbnail featured-thumbnail"><a href="https://livedemo00.template-help.com/wordpress_47532/portfolio-view/dolores-eos-qui-ratione/" title="dolores eos qui ratione"><img alt="dolores eos qui ratione" src="https://livedemo00.template-help.com/wordpress_47532/wp-content/uploads/2013/10/Depositphotos_19423995_original-250x150.jpg"></a></figure><a href="https://livedemo00.template-help.com/wordpress_47532/portfolio-view/dolores-eos-qui-ratione/">dolores eos qui ratione</a></li></ul></div><!-- BEGIN Comments -->
+                                <!-- If comments are open, but there are no comments. -->
+                                <p class="nocomments">No Comments Yet.</p>
+
+
+
+                                <div id="respond">
+
+                                    <h3>Leave a comment</h3>
+
+                                    <div class="cancel-comment-reply">
+                                        <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress_47532/portfolio-view/sed-ut-perspiciatis-unde/#respond" style="display:none;">Click here to cancel reply.</a></small>
+                                    </div>
+
+
+                                    <form action="https://livedemo00.template-help.com/wordpress_47532/wp-comments-post.php" method="post" id="commentform">
+
+
+                                        <p class="field"><input type="text" name="author" id="author" value="Name*" onfocus="if(this.value=='Name*'){this.value=''}" onblur="if(this.value==''){this.value='Name*'}" size="22" tabindex="1" aria-required="true"></p>
+
+                                        <p class="field"><input type="text" name="email" id="email" value="Email (will not be published)*" onfocus="if(this.value=='Email (will not be published)*'){this.value=''}" onblur="if(this.value==''){this.value='Email (will not be published)*'}" size="22" tabindex="2" aria-required="true"></p>
+
+                                        <p class="field"><input type="text" name="url" id="url" value="Website" onfocus="if(this.value=='Website'){this.value=''}" onblur="if(this.value==''){this.value='Website'}" size="22" tabindex="3"></p>
+
+
+                                        <!-- <p>You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p> -->
+
+                                        <p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" onfocus="if(this.value=='Your comment*'){this.value=''}" onblur="if(this.value==''){this.value='Your comment*'}">Your comment*</textarea></p>
+
+                                        <p>
+                                            <input name="submit" type="submit" class="btn btn-primary" id="submit" tabindex="5" value="Submit Comment">
+                                            <input type="hidden" name="comment_post_ID" value="1906" id="comment_post_ID">
+                                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                        </p>
+
+                                    </form>
+
+                                </div>
+
+                                <!-- END Comments -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
