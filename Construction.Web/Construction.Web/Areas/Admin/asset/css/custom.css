@@ -5074,17 +5074,44 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 /** bootstrap-datetimepicker **/
 .input-group.date .input-group-addon {
     border-radius: 0px !important;
-    background-color: #ffff !important;
+    background-color: #fff !important;
 }
 /** /bootstrap-datetimepicker **/
 table.table-bordered.dataTable th {
     text-align: center;
 }
-label.toggle-off{
-    margin-right:0px;
+
+label.toggle-off {
+    margin-right: 0px;
 }
 
-.thumb-edit.dropzone .dz-preview .dz-image{
-    width:250px;
-    height:250px;
+.thumb-edit.dropzone .dz-preview .dz-image {
+    width: 250px;
+    height: 250px;
 }
+
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+    .image-preview-input input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+.image-preview-input-title {
+    margin-left: 2px;
+}
+
