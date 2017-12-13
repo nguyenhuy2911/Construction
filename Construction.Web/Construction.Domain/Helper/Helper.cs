@@ -39,6 +39,18 @@ namespace Construction.Domain.Helper
         {
             if (!Directory.Exists(HostingEnvironment.MapPath(path)))
                 Directory.CreateDirectory(HostingEnvironment.MapPath(path));
+            else
+            {
+                var dir = new DirectoryInfo(HostingEnvironment.MapPath(path));
+                foreach (FileInfo fileinfo in dir.GetFiles())
+                {
+                    fileinfo.Delete();
+                }
+                foreach (DirectoryInfo dirchild in dir.GetDirectories())
+                {
+                    dirchild.Delete(true);
+                }
+            }
             string zipPath = path + @"\" + fileName + ".zip";
             file.SaveAs(HostingEnvironment.MapPath(zipPath));
             string extractPath = HostingEnvironment.MapPath(path);

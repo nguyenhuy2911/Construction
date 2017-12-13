@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 text-right">
                             <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> làm mới</button>
-                            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Lưu</button>
+                            <button type="submit" class="btn btn-success btn-loadding"><span class="glyphicon glyphicon-ok" aria-hidden="true" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing"></span> Lưu</button>
                         </div>
                     </div>
 
@@ -113,34 +113,25 @@
                             360
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <div class="input-group image-preview">
-                                <input type="text" class="form-control image-preview-filename" disabled="disabled" />
+                            <div class="input-group file-preview">
+                                <input type="text" class="form-control file-preview-filename" disabled="disabled" />
                                 <div class="input-group-btn">
-                                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                    <button type="button" class="btn btn-default clear-upload-file" style="display:none;">
                                         <span class="glyphicon glyphicon-remove"></span> Clear
                                     </button>
-                                    <div class="btn btn-default image-preview-input">
+                                    <div class="btn btn-default file-preview-input">
                                         <span class="glyphicon glyphicon-folder-open"></span>
-                                        <span class="image-preview-input-title">Browse</span>
+                                        <span class="file-preview-input-title">Browse</span>
                                         <input type="file" accept="application/zip" id="File_360" name="File_360" />
                                     </div>
-                                    <button type="button" class="btn btn-labeled btn-primary">
+                                    <button type="button" id="Upload360" class="btn btn-labeled btn-primary btn-loadding" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing">
                                         <span class="glyphicon glyphicon-upload"></span>
                                         Upload
                                     </button>
                                 </div>
                             </div>
                             <div class="js-upload-finished">
-                                <div class="list-group">
-                                    <div class="list-group-item list-group-item-success">
-
-                                        <a href="#" class="btn-link pull-right">
-                                            <span class="glyphicon glyphicon-remove"></span>
-                                        </a>
-                                        image-01.jpg
-                                    </div>
-
-                                </div>
+                                <div class="list-360file"></div>
                             </div>
                         </div>
                     </div>
@@ -190,9 +181,87 @@
                 $("#Status").val(ACTIVE_TYPE.BLOCK)
         });
 
-    })
-    var editor = CKEDITOR.replace('Description');
+        $('#Upload360').on('click', function() {
+            Upload360.upload(this, id, document.getElementById("File_360").files[0]);
+        });
 
+        $('.clear-upload-file').click(function(){
+            $('.file-preview').attr("data-content","").popover('hide');
+            $('.file-preview-filename').val("");
+            $('.clear-upload-file').hide();
+            $('.file-preview-input input:file').val("");
+            $(".file-preview-input-title").text("Browse");
+        });
+
+        $(".file-preview-input input:file").change(function (){
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(".file-preview-input-title").text("Change");
+                $(".clear-upload-file").show();
+                $(".file-preview-filename").val(file.name);
+            }
+            reader.readAsDataURL(file);
+        });
+
+    });
+
+    var Upload360 = {
+        _filecontainer : ".list-360file",
+        upload : function(btn, id, file){
+            var formData = new FormData();
+            formData.append("id", id);
+            formData.append("File_360", file);
+            $.ajax({
+                type: "POST",
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                cache: false,
+                dataType:"json",
+                data: formData,
+                url: "/admin/san-pham/upload-360",
+                beforeSend: function(){
+                    $(btn).button('loading')
+                },
+                success: function (response) {
+
+                    $(btn).button('reset');
+                    if (response.StatusCode == 0) {
+                        var html =  '<div class="list-group-item list-group-item-success">'+
+                                            '<a  class="btn-link pull-right btn-loadding" onclick="Upload360.deletefile(this)" >' +
+                                                '<span class="glyphicon glyphicon-remove"></span>'+
+                                            '</a>'+
+                                            '<a href="'+ response.Results.Link +'" target="_blank">' +
+                                              '' + response.Results.Link
+                                             '</a>'+
+                                    '</div>';
+
+                        $(Upload360._filecontainer).html(html);
+                    }
+                }
+            });
+        },
+        deletefile : function(btn){
+            $(btn).button('loading')
+            //$.ajax({
+            //    type: "POST",
+            //    url: "/admin/san-pham/upload-360",
+            //    mimeType :"multipart/form-data",
+            //    beforeSend: function(){
+            //        $(btn).button('loading')
+            //    },
+            //    success: function (response) {
+            //        $(btn).button('reset');
+            //        if (response.status) {
+
+            //        }
+            //    }
+            //});
+        }
+    }
+
+    var editor = CKEDITOR.replace('Description');
     var myDropzone = new Dropzone("div#div-thumb", {
         autoProcessQueue: true,
         url: "/admin/san-pham/save-image",
@@ -261,52 +330,6 @@
         myDropzone.removeFile(file);
     });
 
-    $(function() {
-        // Create the close button
-        var closebtn = $('<button/>', {
-            type:"button",
-            text: 'x',
-            id: 'close-preview',
-            style: 'font-size: initial;',
-        });
-        closebtn.attr("class","close pull-right");
-        // Set the popover default content
-        $('.image-preview').popover({
-            trigger:'manual',
-            html:true,
-            title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
-            content: "There's no image",
-            placement:'bottom'
-        });
-        // Clear event
-        $('.image-preview-clear').click(function(){
-            $('.image-preview').attr("data-content","").popover('hide');
-            $('.image-preview-filename').val("");
-            $('.image-preview-clear').hide();
-            $('.image-preview-input input:file').val("");
-            $(".image-preview-input-title").text("Browse");
-        });
-        // Create the preview image
-        $(".image-preview-input input:file").change(function (){
-            var img = $('<img/>', {
-                id: 'dynamic',
-                width:250,
-                height:200
-            });
-            var file = this.files[0];
-            var reader = new FileReader();
-            // Set preview image into the popover data-content
-            reader.onload = function (e) {
-                $(".image-preview-input-title").text("Change");
-                $(".image-preview-clear").show();
-                $(".image-preview-filename").val(file.name);
-                //img.attr('src', e.target.result);
-                //$(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
-            }
-            reader.readAsDataURL(file);
-        });
-    });
-
 </script>
 <script type="text/javascript">
     function initImageUpload(box) {
@@ -320,7 +343,6 @@
         }
 
         function previewImage(file){
-            debugger;
             let thumb = box.querySelector('.js--image-preview'),
                 reader = new FileReader();
 
@@ -332,7 +354,6 @@
         }
 
         function checkType(file){
-            debugger;
             let imageType = /image.*/;
             if (!file.type.match(imageType)) {
                 throw 'Datei ist kein Bild';

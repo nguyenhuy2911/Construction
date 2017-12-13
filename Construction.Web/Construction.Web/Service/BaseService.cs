@@ -9,6 +9,6 @@ namespace Construction.Web.Service
 {
     public class BaseService
     {
-        protected UrlHelper Url = new UrlHelper(HttpContext.Current.Request.RequestContext);
+        public UrlHelper Url = new UrlHelper(HttpContext.Current.Request.RequestContext);
     }
 }

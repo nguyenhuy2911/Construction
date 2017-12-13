@@ -5090,7 +5090,7 @@ label.toggle-off {
     height: 250px;
 }
 
-.image-preview-input {
+.file-preview-input {
     position: relative;
     overflow: hidden;
     margin: 0px;
@@ -5099,7 +5099,7 @@ label.toggle-off {
     border-color: #ccc;
 }
 
-    .image-preview-input input[type=file] {
+    .file-preview-input input[type=file] {
         position: absolute;
         top: 0;
         right: 0;
@@ -5111,7 +5111,7 @@ label.toggle-off {
         filter: alpha(opacity=0);
     }
 
-.image-preview-input-title {
+.file-preview-input-title {
     margin-left: 2px;
 }
 

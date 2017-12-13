@@ -1,5 +1,6 @@
 ﻿
 using Construction.Web.Areas.Admin.Models.Product;
+using Construction.Web.Common;
 using Construction.Web.Service;
 using Newtonsoft.Json;
 using System.Web;
@@ -58,13 +59,12 @@ namespace Construction.Web.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("save")]
-        public ActionResult Save(ProductCrudViewModel model, HttpPostedFileBase File_360)
+        public ActionResult Save(ProductCrudViewModel model)
         {
             int id = 0;
-            model.File_360 = File_360;
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
-                id = _project_Service.UpdateProduct(model);
+                id = _project_Service.UpdateProduct(model).Results.Id;
             }
             else
             {
@@ -82,6 +82,17 @@ namespace Construction.Web.Areas.Admin.Controllers
             model.FileCollection = Request.Files;
             _project_Service.UpdateProduct(model);
             return 0;
+        }
+
+        [HttpPost]
+        [Route("upload-360")]
+        public string Upload360(int id)
+        {
+            var model = _project_Service.Find(id);
+            model.File_360 = Request.Files["File_360"];
+            var data = _project_Service.UpdateProduct(model);
+            string json = JsonConvert.SerializeObject(data);
+            return json;
         }
     }
 }
