@@ -44,12 +44,13 @@ namespace Construction.Domain.Helper
                 var dir = new DirectoryInfo(HostingEnvironment.MapPath(path));
                 foreach (FileInfo fileinfo in dir.GetFiles())
                 {
-                    fileinfo.Delete();
+                    fileinfo.Delete();                    
                 }
                 foreach (DirectoryInfo dirchild in dir.GetDirectories())
                 {
                     dirchild.Delete(true);
                 }
+                
             }
             string zipPath = path + @"\" + fileName + ".zip";
             file.SaveAs(HostingEnvironment.MapPath(zipPath));
@@ -58,6 +59,7 @@ namespace Construction.Domain.Helper
             File.Delete(HostingEnvironment.MapPath(zipPath));
             FileInfo fileInfo = new FileInfo(string.Format("{0}/{1}", HostingEnvironment.MapPath(path), "Sample.html"));
             fileInfo.CopyTo(string.Format(string.Format("{0}/{1}.{2}", HostingEnvironment.MapPath(path), fileName,"html"),true));
+           
         }
 
     }

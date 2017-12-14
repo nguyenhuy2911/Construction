@@ -25,6 +25,9 @@ namespace Construction.Web.Service.FrontEnd
         public Product_Detail_ViewModel GetDetailItem(int id)
         {
             var item = _productManager.GetById(id);
+            var data = new Product();
+            data = item;
+            item.Link = Url.Product360Url(item.Link);
             return new Product_Detail_ViewModel()
             {
                 Item = item

@@ -85,24 +85,74 @@ namespace Construction.Web.Service
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
-
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
-                _productManager.Update(_saveData);
+                _productManager.Update(_saveData);                
+                _productManager.Save();            
+                return result = new Result<Product>()
+                {
+                    StatusCode = 0,
+                    Results = _saveData,
+                };
+            }
+            catch (EntityException ex)
+            {
+                return result;
+            }
+            catch (Exception ex)
+            {
 
+                return result;
+            }
+
+        }
+
+        public Result<Product> UploadImage(ProductCrudViewModel model)
+        {
+            var result = new Result<Product>();
+            try
+            {
+                var _saveData = new Product();
+                _saveData = _productManager.GetById(model.Id);
                 if (model.FileCollection != null && model.FileCollection.Count > 0)
                 {
                     _saveData.Thumbnail = string.Format("{0}/{1}.{2}", _saveData.Id, _saveData.Alias, "png");
                     UploadFile.UploadProductImage(model.FileCollection, _saveData.Alias, _saveData.Id.ToString());
                 }
+                _productManager.Update(_saveData);
+                _productManager.Save();
+                return result = new Result<Product>()
+                {
+                    StatusCode = 0,
+                    Results = _saveData,
+                };
+            }
+            catch (EntityException ex)
+            {
+                return result;
+            }
+            catch (Exception ex)
+            {
 
-                if (model.File_360 != null)
+                return result;
+            }
+
+        }
+
+        public Result<Product> Upload360(ProductCrudViewModel model)
+        {
+            var result = new Result<Product>();
+            try
+            {
+                var _saveData = new Product();
+                _saveData = _productManager.GetById(model.Id);                   
+                if (model.File_360 != null && !string.IsNullOrEmpty(model.File_360.FileName))
                 {
                     _saveData.Link = string.Format("{0}/{1}.{2}", _saveData.Id.ToString(), _saveData.Alias, "html");
                     UploadFile.UploadProduct360File(model.File_360, _saveData.Alias, _saveData.Id.ToString());
                 }
+                _productManager.Update(_saveData);
                 _productManager.Save();
-                _saveData.Link = this.Url.Product360Url(_saveData.Link);
                 return result = new Result<Product>()
                 {
                     StatusCode = 0,

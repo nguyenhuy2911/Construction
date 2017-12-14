@@ -10,18 +10,26 @@ using System.Threading.Tasks;
 using Construction.Domain.Extensions;
 namespace Construction.Domain.Core
 {
-    public class DataBaseManager<T> where T : class
+    public class DataBaseManager<T> :  Disposable where T : class
     {
         private static DataBaseManager<T> databaseManager;
-        private static DatabaseContext dataContext = DatabaseContext.Create();
+        private static DatabaseContext dataContext;
         private readonly IDbSet<T> dbset;
 
         public DataBaseManager()
         {
+            this.CreateDatabaseContext();
             dbset = dataContext.Set<T>();
         }
+
+        public DatabaseContext CreateDatabaseContext()
+        {
+            return dataContext = new DatabaseContext();
+        }
+
         public static DataBaseManager<T> Create()
         {
+           
             return databaseManager ?? (databaseManager = new DataBaseManager<T>());
         }
         public virtual void Add(T entity)
@@ -72,6 +80,11 @@ namespace Construction.Domain.Core
         {
             return dataContext.SaveChanges();
         }
+        protected override void DisposeCore()
+        {
+            if (dataContext != null)
+                dataContext.Dispose();
 
+        }
     }
 }

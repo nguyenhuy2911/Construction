@@ -1,4 +1,5 @@
 using Construction.Domain.Models;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
@@ -7,7 +8,6 @@ namespace Construction.Domain.Infrastructure
 {
     public partial class DatabaseContext : DbContext
     {
-        private static DatabaseContext _dataContext;
         static DatabaseContext()
         {
             Database.SetInitializer(new DataContextDBInitializer());
@@ -16,12 +16,6 @@ namespace Construction.Domain.Infrastructure
         public DatabaseContext(): base("Name=DatabaseContext")
         {
         }
-
-        public static DatabaseContext Create()
-        {
-            return _dataContext ?? (_dataContext = new DatabaseContext());
-        }
-
         public virtual void Commit()
         {
             base.SaveChanges();

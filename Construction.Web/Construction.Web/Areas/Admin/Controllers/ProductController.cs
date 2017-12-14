@@ -3,6 +3,7 @@ using Construction.Web.Areas.Admin.Models.Product;
 using Construction.Web.Common;
 using Construction.Web.Service;
 using Newtonsoft.Json;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -80,7 +81,7 @@ namespace Construction.Web.Areas.Admin.Controllers
         {
             var model = _project_Service.Find(id);
             model.FileCollection = Request.Files;
-            _project_Service.UpdateProduct(model);
+            _project_Service.UploadImage(model);
             return 0;
         }
 
@@ -90,7 +91,8 @@ namespace Construction.Web.Areas.Admin.Controllers
         {
             var model = _project_Service.Find(id);
             model.File_360 = Request.Files["File_360"];
-            var data = _project_Service.UpdateProduct(model);
+            var data = _project_Service.Upload360(model);
+            data.Results.Link = this.Url.Product360Url(data.Results.Link);
             string json = JsonConvert.SerializeObject(data);
             return json;
         }
