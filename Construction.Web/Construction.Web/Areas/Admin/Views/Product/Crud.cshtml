@@ -164,6 +164,8 @@
 
 <script>
     var id = @Model.Id;
+    var productName = '@Model.Name';
+    var thumbImg = '@Model.Thumbnail';
     $(function () {
         if (id > 0)
             $(".update-view").show()
@@ -234,8 +236,8 @@
                                             '</a>'+
                                             '<a href="'+ response.Results.Link +'" target="_blank">' +
                                               '' + response.Results.Link
-                                             '</a>'+
-                                    '</div>';
+                        '</a>'+
+               '</div>';
 
                         $(Upload360._filecontainer).html(html);
                     }
@@ -274,33 +276,26 @@
         thumbnailWidth: 250,
         thumbnailHeight: 250,
         init: function () {
+            debugger;
             var thisDropzone = this;
-            //if (listImage != null) {
-            //    $.each(listImage, function (index, item) {
 
-            //        var mockFile = {
-            //            name: item.Name,
-            //            id: item.Id,
-            //            path: item.Path,
-            //            //  size: 9000000,
-            //            accepted: true,
-            //            kind: 'image'
-            //        };
-            //        // Call the default addedfile event handler
-            //        thisDropzone.options.addedfile.call(thisDropzone, mockFile);
-
-            //        // And optionally show the thumbnail of the file:ss
-            //        thisDropzone.files.push(mockFile);
-            //        thisDropzone.createThumbnailFromUrl(mockFile, "images-handle/get-image?path=" + item.Path + "&w=240&h=240", function () {
-            //            // thisDropzone.emit("complete", mockFile);
-            //        }, "anonymous");
-            //        thisDropzone.emit("success", mockFile);
-            //        thisDropzone.emit("complete", mockFile);
-            //        //    thisDropzone.uploadFiles([mockFile])
-
-            //    });
-            //}
-
+            //var url = [thumbImg];
+            var blob = new Blob([thumbImg], {type: 'images'});
+            reader = new FileReader();
+            reader.readAsDataURL(blob);
+            var mockFile = {
+                name: productName,
+                id: id,
+                path: thumbImg,
+                size: blob.size,
+                accepted: true,
+                kind: 'image'
+            };
+            thisDropzone.options.addedfile.call(thisDropzone, mockFile);
+            thisDropzone.files.push(mockFile);
+            thisDropzone.createThumbnailFromUrl(mockFile, thumbImg);
+            thisDropzone.emit("success", mockFile);
+            thisDropzone.emit("complete", mockFile);
         },
         //    removedfile: function (file, _) {
         //        $.ajax({

@@ -43,6 +43,7 @@ namespace Construction.Web.Service
             model.ShortDescription = _data.ShortDescription;
             model.Description = _data.Description;
             model.Link = _data.Link;
+            model.Thumbnail = Url.ProductImgUrl(_data.Thumbnail);
             return model;
         }
         public int CreateProduct(ProductCrudViewModel model)
