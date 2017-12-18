@@ -1,7 +1,9 @@
-﻿@{
+﻿
+@{
 
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+@using Construction.Web.Common;
 @model Construction.Web.Areas.Admin.Models.Product.ProductCrudViewModel
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -28,19 +30,34 @@
                 <br />
                 <form id="form" action="/admin/san-pham/save" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                     @Html.HiddenFor(p => p.Id)
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Tên dự án <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
+                            <label>
+                                Tên dự án <span class="required">*</span>
+                            </label>
                             <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
+
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Mô tả ngắn
-                        </label>
-                        <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group">
+                            <label>
+                                Danh mục<span class="required">*</span>
+                            </label>
+                            @Html.DropDownListFor(m => m.CategoryId, Model.ListCategory, "- Chọn danh mục -", new { @class = "form-control col-md-7 col-xs-12", @required = "required" })
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group">
+                            <label>
+                                Dịch vụ<span class="required">*</span>
+                            </label>
+                            @Html.DropDownListFor(m => m.ServiceId, Model.ListService, "- Chọn dịch vụ -", new { @class = "form-control col-md-7 col-xs-12", @required = "required" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                                Mô tả <span class="required">*</span>
+                            </label>
                             <textarea id="ShortDescription" name="ShortDescription"  class="form-control col-md-7 col-xs-12" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
                         </div>
                     </div>
@@ -52,27 +69,24 @@
                             <textarea id="Description" name="Description" required="required">@WebUtility.HtmlDecode(Model.Description)</textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta KeyWord
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Meta KeyWord
+                            </label>
                             <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta Description
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
+                            <label>
+                                Meta Description
+                            </label>
                             <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3">@Model.MetaDescription</textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Kích hoạt
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                             @Html.HiddenFor(p => p.Status)
                             @{
                                 string _checked = Model.Active ? "checked" : "";
@@ -80,7 +94,6 @@
                             <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
                         </div>
                     </div>
-
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 text-left">
@@ -116,11 +129,11 @@
             <div class="x_content">
                 <br />
                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            360
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
+                            <label>
+                                360
+                            </label>
                             <div class="input-group file-preview">
                                 <input type="text" class="form-control file-preview-filename" disabled="disabled" />
                                 <div class="input-group-btn">
@@ -141,14 +154,14 @@
                             <div class="js-upload-finished">
                                 <div class="list-360file"></div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="form-group update-view">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Thumbnail 390 x 297
-                        </label>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group update-view">
+                            <label>
+                                Thumbnail 390 x 297
+                            </label>
                             <div id="div-thumb" class="thumb-edit dropzone">
                                 <div class="dz-message">
                                     <div class="drag-icon-cph">
@@ -163,7 +176,6 @@
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>

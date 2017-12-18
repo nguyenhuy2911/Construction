@@ -22,19 +22,23 @@ namespace Construction.Web.Service
             model.Name = _data.Name;
             model.Alias = _data.Alias;
             model.Status = _data.Status;
+            model.MetaKeyWord = _data.MetaKeyWord;
+            model.MetaDescription = _data.MetaDescription;
             return model;
         }
         public int CreateService(ServiceCrudViewModel model)
         {
             try
             {
-                var _createData = new Construction.Domain.Models.Service();
-                _createData.Name = model.Name;
-                _createData.Alias = model.Name.GenerateFriendlyName();
-                _createData.Status = model.Status;
-                _serviceManager.Add(_createData);
+                var _saveData = new Construction.Domain.Models.Service();
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _serviceManager.Add(_saveData);
                 _serviceManager.Save();
-                return _createData.Id;
+                return _saveData.Id;
             }
             catch (Exception ex)
             {
@@ -47,14 +51,16 @@ namespace Construction.Web.Service
         {
             try
             {
-                var _updateData = new Construction.Domain.Models.Service();
-                _updateData = _serviceManager.GetById(model.Id);
-                _updateData.Name = model.Name;
-                _updateData.Alias = model.Name.GenerateFriendlyName();
-                _updateData.Status = model.Status;
-                _serviceManager.Update(_updateData);
+                var _saveData = new Construction.Domain.Models.Service();
+                _saveData = _serviceManager.GetById(model.Id);
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _serviceManager.Update(_saveData);
                 _serviceManager.Save();
-                return _updateData.Id;
+                return _saveData.Id;
             }
             catch (Exception ex)
             {

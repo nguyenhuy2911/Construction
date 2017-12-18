@@ -3,6 +3,7 @@ using Construction.Domain.Helper.Enum;
 using Construction.Domain.Models;
 using Construction.Web.Common;
 using Construction.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -41,7 +42,7 @@ namespace Construction.Web.Service.FrontEnd
         public Product_ItemsViewModel GetItems(Page page)
         {
             int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
-            var pagination = new Pagination<Item>(page.PageNumber, page.PageSize);           
+            var pagination = new Pagination<Item>(page.PageNumber, page.PageSize);
             var datas = _productManager.GetPage(page, p => p.Status == activeStatus, p => p.Id);
 
             if (datas != null && datas.Results != null && datas.Results.Count > 0)
@@ -54,13 +55,32 @@ namespace Construction.Web.Service.FrontEnd
                     Name = p.Name,
                     Thumbnail = Url.ProductImgUrl(p.Thumbnail),
                     ShortDescription = p.ShortDescription,
-                    Link = Url.RouteUrl("ProductDetail", new {alias= p.Alias, id = p.Id }) 
+                    Link = Url.RouteUrl("ProductDetail", new { alias = p.Alias, id = p.Id })
                 }).ToList();
             }
             return new Product_ItemsViewModel()
             {
                 Data = pagination
             };
+        }
+
+        public IEnumerable<Item> GetRelateItems()
+        {
+            var items = new List<Item>();
+            int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
+            var datas = _productManager.GetPage(new Page(0, 8), p => p.Status == activeStatus, p => Guid.NewGuid());
+            if (datas != null && datas.Results != null && datas.Results.Count > 0)
+            {
+                items = datas.Results.Select(p => new Item()
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Thumbnail = Url.ProductImgUrl(p.Thumbnail),
+                    ShortDescription = p.ShortDescription,
+                    Link = Url.RouteUrl("ProductDetail", new { alias = p.Alias, id = p.Id })
+                }).ToList();
+            }
+            return items;
         }
 
     }

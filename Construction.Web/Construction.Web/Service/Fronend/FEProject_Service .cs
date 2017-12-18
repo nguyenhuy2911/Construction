@@ -15,7 +15,6 @@ namespace Construction.Web.Service.FrontEnd
         public Project_HomeItemsViewModel GetHomeItems()
         {
             int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
-            var items = _projectManager.GetPage(new Page(0, 10), p=>p.Status == activeStatus, p => p.Id)?.Results ?? new List<Project>();
             return new Project_HomeItemsViewModel()
             {
                 Items = items
@@ -55,6 +54,25 @@ namespace Construction.Web.Service.FrontEnd
             {
                 Data = pagination
             };
+        }
+
+        public IEnumerable<Item> GetRelateItems()
+        {
+            var items = new List<Item>();
+            int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
+            var datas = _projectManager.GetPage(new Page(0, 8), p => p.Status == activeStatus, p => Guid.NewGuid());
+            if (datas != null && datas.Results != null && datas.Results.Count > 0)
+            {
+                items = datas.Results.Select(p => new Item()
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Thumbnail = Url.ProjectImgUrl(p.Thumbnail),
+                    ShortDescription = p.ShortDescription,
+                    Link = Url.RouteUrl("ProjectDetail", new { alias = p.Alias, id = p.Id })
+                }).ToList();
+            }
+            return items;
         }
 
     }
