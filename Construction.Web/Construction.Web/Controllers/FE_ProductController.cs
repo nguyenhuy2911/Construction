@@ -17,7 +17,6 @@ namespace Construction.Web.Controllers
             this._product_Service = new FEProduct_Service();
         }
 
-
         public ActionResult Index(int pageNumber = 0)
         {
             var page = new Page(pageNumber, 9);
@@ -29,6 +28,12 @@ namespace Construction.Web.Controllers
         {
             var model = _product_Service.GetHomeItems();
             return View("~/Views/FE_Product/_HomeItems.cshtml", model);
+        }
+
+        public ActionResult RelateItems()
+        {
+            var model = _product_Service.GetRelateItems();
+            return View("~/Views/_Partial/RelateItems.cshtml", model);
         }
 
         public ActionResult Detail(string alias, int id)

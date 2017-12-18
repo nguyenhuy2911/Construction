@@ -1,6 +1,7 @@
 ﻿using Construction.Domain.Core;
 using Construction.Domain.Helper.Enum;
 using Construction.Domain.Models;
+using Construction.Web.Common;
 using Construction.Web.Models;
 using Construction.Web.Models.Navigation;
 using System;
@@ -22,6 +23,25 @@ namespace Construction.Web.Service.FrontEnd
             {
                 Items = items
             };
+        }
+
+        public IEnumerable<Item> GetRelateItems()
+        {
+            var items = new List<Item>();
+            int activeStatus = (int)ACTIVE_TYPE.ACTIVE;
+            var datas = _projectManager.GetPage(new Page(0, 8), p => p.Status == activeStatus, p => Guid.NewGuid());
+            if (datas != null && datas.Results != null && datas.Results.Count > 0)
+            {
+                items = datas.Results.Select(p => new Item()
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Thumbnail = Url.ProjectImgUrl(p.Thumbnail),
+                    ShortDescription = p.ShortDescription,
+                    Link = Url.RouteUrl("ProjectDetail", new { alias = p.Alias, id = p.Id })
+                }).ToList();
+            }
+            return items;
         }
 
     }

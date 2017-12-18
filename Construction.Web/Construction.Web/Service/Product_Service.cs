@@ -1,5 +1,6 @@
 ﻿using Construction.Domain.Core;
 using Construction.Domain.Helper;
+using Construction.Domain.Helper.Enum;
 using Construction.Domain.Models;
 using Construction.Web.Areas.Admin.Models.Product;
 using Construction.Web.Common;
@@ -8,12 +9,15 @@ using System.Collections.Generic;
 using System.Data.Entity.Core;
 using System.Linq;
 using System.Net;
+using System.Web.Mvc;
 
 namespace Construction.Web.Service
 {
     public class Product_Service : BaseService
     {
         private readonly DataBaseManager<Product> _productManager = DataBaseManager<Product>.Create();
+        private readonly DataBaseManager<Category> _categoryManager = DataBaseManager<Category>.Create();
+        private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
         public Result<List<Product>> GetProducts(Page page)
         {
             var data = _productManager.GetAll(page, p => p.Id) ?? new Result<List<Product>>();
@@ -32,6 +36,7 @@ namespace Construction.Web.Service
             }
             return data;
         }
+
         public ProductCrudViewModel Find(int id)
         {
             var _data = _productManager.GetById(id);
@@ -44,8 +49,45 @@ namespace Construction.Web.Service
             model.Description = _data.Description;
             model.Link = _data.Link;
             model.Thumbnail = Url.ProductImgUrl(_data.Thumbnail);
+            model.CategoryId = _data.CategoryId;
+            model.ListCategory = this.GetCategorySelectList(_data.CategoryId);
+            model.ServiceId = _data.ServiceId;
+            model.ListService = this.GetServiceSelectList(_data.ServiceId);
             return model;
         }
+
+        private IEnumerable<SelectListItem> GetCategorySelectList( int selectedValue)
+        {
+            var result = new List<SelectListItem>();
+            var data= _categoryManager.GetAll(new Page(0, int.MaxValue), p => p.Id);
+            if (data != null && data.Results != null && data.Results.Count > 0)
+            {
+                result.AddRange( data.Results.Select(p => new SelectListItem()
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Name,
+                    Selected = p.Id.Equals(selectedValue)
+                }).ToList());
+            }
+            return result;
+        }
+
+        private IEnumerable<SelectListItem> GetServiceSelectList(int selectedValue)
+        {
+            var result = new List<SelectListItem>();
+            var data = _serviceManager.GetAll(new Page(0, int.MaxValue), p => p.Id);
+            if (data != null && data.Results != null && data.Results.Count > 0)
+            {
+                result.AddRange(data.Results.Select(p => new SelectListItem()
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Name,
+                    Selected = p.Id.Equals(selectedValue)
+                }).ToList());
+            }
+            return result;
+        }
+
         public int CreateProduct(ProductCrudViewModel model)
         {
             try
@@ -54,8 +96,8 @@ namespace Construction.Web.Service
                 _saveData.Name = model.Name;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
-                _saveData.CategoryId = 2;
-                _saveData.ServiceId = 2;
+                _saveData.CategoryId = model.CategoryId;
+                _saveData.ServiceId = model.ServiceId;
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
@@ -74,6 +116,7 @@ namespace Construction.Web.Service
             }
 
         }
+
         public Result<Product> UpdateProduct(ProductCrudViewModel model)
         {
             var result = new Result<Product>();
@@ -82,6 +125,8 @@ namespace Construction.Web.Service
                 var _saveData = new Product();
                 _saveData = _productManager.GetById(model.Id);
                 _saveData.Name = model.Name;
+                _saveData.CategoryId = model.CategoryId;
+                _saveData.ServiceId = model.ServiceId;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);

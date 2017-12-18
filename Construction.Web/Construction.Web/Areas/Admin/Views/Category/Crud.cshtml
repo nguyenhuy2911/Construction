@@ -29,24 +29,35 @@
                 <br />
                 <form id="demo-form2" action="/admin/danh-muc/save" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                     @Html.HiddenFor(p => p.Id)
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
-                            Tên danh mục <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Tên danh mục <span class="required">*</span>
+                            </label>
                             <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
                         </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Meta KeyWord
+                            </label>
+                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
+                        </div>
+                    </div>                    
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                                Meta Description
+                            </label>
+                            <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3">@Model.MetaDescription</textarea>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
-                            Kích hoạt
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            @Html.HiddenFor(p=>p.Status)
-                            @{ 
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">                            
+                            @Html.HiddenFor(p => p.Status)
+                            @{
                                 string _checked = Model.Active ? "checked" : "";
                             }
-                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked  type="checkbox">
+                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -71,14 +82,14 @@
         ACTIVE: 1
     }
     $(function () {
-        
+
         $('#chk-status').bootstrapToggle({
             on: 'Đã kích hoạt',
             off: 'Khóa'
         });
         $('#chk-status').change(function () {
             if ($(this).prop('checked') == true)
-                $("#Status").val(ACTIVE_TYPE.ACTIVE)            
+                $("#Status").val(ACTIVE_TYPE.ACTIVE)
             else
                 $("#Status").val(ACTIVE_TYPE.BLOCK)
         })

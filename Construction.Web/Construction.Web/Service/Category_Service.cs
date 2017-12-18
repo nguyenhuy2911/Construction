@@ -6,6 +6,8 @@ using System.Web;
 using Construction.Domain.Core;
 using Construction.Web.Areas.Admin.Models.Category;
 using Construction.Domain.Helper;
+using Construction.Domain.Helper.Enum;
+
 namespace Construction.Web.Service
 {
     public class Category_Service : BaseService
@@ -15,6 +17,13 @@ namespace Construction.Web.Service
         {
             return _categoryManager.GetAll(page, p=> p.Id);
         }
+
+        public Result<List<Category>> GetAllActivedCategories(Page page)
+        {
+            int active = (int)ACTIVE_TYPE.ACTIVE;
+            return _categoryManager.GetPage(page, p => p.Status == active,  p => p.Id);
+        }
+
         public CategoryCrudViewModel Find(int id)
         {
             var _data = _categoryManager.GetById(id);
@@ -23,19 +32,23 @@ namespace Construction.Web.Service
             model.Name = _data.Name;
             model.Alias = _data.Alias;
             model.Status = _data.Status;
+            model.MetaKeyWord = _data.MetaKeyWord;
+            model.MetaDescription = _data.MetaDescription;
             return model;
         }
         public int CreateCategory(CategoryCrudViewModel model)
         {
             try
             {
-                var _createData = new Category();
-                _createData.Name = model.Name;
-                _createData.Alias = model.Name.GenerateFriendlyName();
-                _createData.Status = model.Status;
-                _categoryManager.Add(_createData);
+                var _saveData = new Category();
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _categoryManager.Add(_saveData);
                 _categoryManager.Save();
-                return _createData.Id;
+                return _saveData.Id;
             }
             catch (Exception ex)
             {
@@ -48,14 +61,16 @@ namespace Construction.Web.Service
         {
             try
             {
-                var _updateData = new Category();
-                _updateData = _categoryManager.GetById(model.Id);
-                _updateData.Name = model.Name;
-                _updateData.Alias = model.Name.GenerateFriendlyName();
-                _updateData.Status = model.Status;
-                _categoryManager.Update(_updateData);
+                var _saveData = new Category();
+                _saveData = _categoryManager.GetById(model.Id);
+                _saveData.Name = model.Name;
+                _saveData.Alias = model.Name.GenerateFriendlyName();
+                _saveData.Status = model.Status;
+                _saveData.MetaKeyWord = model.MetaKeyWord;
+                _saveData.MetaDescription = model.MetaDescription;
+                _categoryManager.Update(_saveData);
                 _categoryManager.Save();
-                return _updateData.Id;
+                return _saveData.Id;
             }
             catch (Exception ex)
             {

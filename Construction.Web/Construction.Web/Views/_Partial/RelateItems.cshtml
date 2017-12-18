@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+@using Construction.Web.Models
+@using Construction.Domain.Core
+@model IEnumerable<Item>
+<ul class="related-posts_list clearfix">
+    @foreach (var item in Model)
+    {
+        <li class="related-posts_item">
+            <figure class="thumbnail featured-thumbnail">
+                <a href="@item.Link" title="@item.Name">
+                    <img alt="@item.Name" src="@item.Thumbnail" style="width: 100%; height:150px;">
+                </a>
+            </figure>
+            <a href="@item.Link" title="@item.Name">
+                @item.Name
+            </a>
+        </li>
+    }
+</ul>
