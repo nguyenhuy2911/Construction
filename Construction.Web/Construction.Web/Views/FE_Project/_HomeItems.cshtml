@@ -26,7 +26,7 @@
                     <li class="span6">
                         <figure class="featured-thumbnail thumbnail">
                             <a href="@Url.RouteUrl("ProjectDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">
-                                <img src="@Url.ProjectImgUrl(Model.Items[index].Thumbnail)" style="width:292px; height:294px;" alt="@Model.Items[index].Name">
+                                <img data-src="@Url.ProjectImgUrl(Model.Items[index].Thumbnail)" style="width:292px; height:294px;" alt="@Model.Items[index].Name">
                                 <span class="zoom-icon"></span>
                             </a>
                         </figure>
@@ -34,7 +34,7 @@
                         <div class="desc">
                             <div class="title-part">
                                 <h5>
-                                <a href="@Url.RouteUrl("ProjectDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
+                                    <a href="@Url.RouteUrl("ProjectDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
                                 </h5>
                                 <p class="excerpt">@Html.Raw(WebUtility.HtmlDecode(Model.Items[index].ShortDescription.LimitTo(100)))</p>
                             </div>

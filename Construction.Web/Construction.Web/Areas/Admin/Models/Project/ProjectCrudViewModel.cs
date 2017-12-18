@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Construction.Web.Areas.Admin.Models.Project
 {
@@ -13,5 +14,7 @@ namespace Construction.Web.Areas.Admin.Models.Project
         public HttpFileCollectionBase FileCollection { get; set; }
 
         public HttpPostedFileBase File_360 { get; set; }
+        public IEnumerable<SelectListItem> ListCategory { get; set; }
+        public IEnumerable<SelectListItem> ListService { get; set; }
     }
 }

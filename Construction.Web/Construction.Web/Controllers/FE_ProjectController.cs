@@ -30,6 +30,12 @@ namespace Construction.Web.Controllers
             return View("~/Views/FE_Project/_HomeItems.cshtml", model);
         }
 
+        public ActionResult RelateItems()
+        {
+            var model = _project_Service.GetRelateItems();
+            return View("~/Views/_Partial/RelateItems.cshtml", model);
+        }
+
         public ActionResult Detail(string alias, int id)
         {
             var model = _project_Service.GetDetailItem(id);

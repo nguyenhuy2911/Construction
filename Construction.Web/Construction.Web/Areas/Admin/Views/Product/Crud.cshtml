@@ -35,7 +35,7 @@
                             <label>
                                 Tên dự án <span class="required">*</span>
                             </label>
-                            <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
+                            <input type="text" id="Name" name="Name" class="form-control" required="required" value="@Model.Name">
 
                         </div>
                     </div>
@@ -44,54 +44,60 @@
                             <label>
                                 Danh mục<span class="required">*</span>
                             </label>
-                            @Html.DropDownListFor(m => m.CategoryId, Model.ListCategory, "- Chọn danh mục -", new { @class = "form-control col-md-7 col-xs-12", @required = "required" })
+                            @Html.DropDownListFor(m => m.CategoryId, Model.ListCategory, "- Chọn danh mục -", new { @class = "form-control", @required = "required" })
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12 form-group">
                             <label>
                                 Dịch vụ<span class="required">*</span>
                             </label>
-                            @Html.DropDownListFor(m => m.ServiceId, Model.ListService, "- Chọn dịch vụ -", new { @class = "form-control col-md-7 col-xs-12", @required = "required" })
+                            @Html.DropDownListFor(m => m.ServiceId, Model.ListService, "- Chọn dịch vụ -", new { @class = "form-control", @required = "required" })
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                             <label>
-                                Mô tả <span class="required">*</span>
+                                Mô tả ngắn
                             </label>
-                            <textarea id="ShortDescription" name="ShortDescription"  class="form-control col-md-7 col-xs-12" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
+                            <textarea id="ShortDescription" name="ShortDescription" class="form-control" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Mô tả 
-                        </label>
-                        <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                                Mô tả
+                            </label>
                             <textarea id="Description" name="Description" required="required">@WebUtility.HtmlDecode(Model.Description)</textarea>
+
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Meta Description
+                            </label>
+                            <textarea id="MetaDescription" name="MetaDescription" class="form-control" rows="3">@Model.MetaDescription</textarea>
+                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                             <label>
                                 Meta KeyWord
                             </label>
-                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
+                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control" value="@Model.MetaKeyWord">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
-                            <label>
-                                Meta Description
-                            </label>
-                            <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3">@Model.MetaDescription</textarea>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label style="visibility:hidden">
+                                *
+                            </label>
                             @Html.HiddenFor(p => p.Status)
                             @{
                                 string _checked = Model.Active ? "checked" : "";
                             }
-                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
+                            </div>
+
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -186,6 +192,6 @@
     var id = @Model.Id;
     var productName = '@Model.Name';
     var thumbImg = '@Model.Thumbnail';
-    var Link_360 = '@Model.Link';    
+    var Link_360 = '@Model.Link';
 </script>
 <script src="~/Areas/Admin/script/Product/Product_Crud.js"></script>

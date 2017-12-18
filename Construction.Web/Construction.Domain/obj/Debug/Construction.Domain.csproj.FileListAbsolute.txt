@@ -130,7 +130,6 @@ E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Micro
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Newtonsoft.Json.xml
-E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.dll
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.pdb
 E:\Working\Git\Construction\Construction.Web\Construction.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll

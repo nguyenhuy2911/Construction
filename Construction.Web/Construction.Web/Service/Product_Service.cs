@@ -16,14 +16,16 @@ namespace Construction.Web.Service
     public class Product_Service : BaseService
     {
         private readonly DataBaseManager<Product> _productManager;
-
+        private readonly DataBaseManager<Category> _categoryManager;
+        private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager;
         public Product_Service()
         {
             _productManager = DataBaseManager<Product>.Create();
+            _categoryManager = DataBaseManager<Category>.Create();
+            _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
         }
 
-        private readonly DataBaseManager<Category> _categoryManager = DataBaseManager<Category>.Create();
-        private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
+        
         public Result<List<Product>> GetProducts(Page page)
         {
             var data = _productManager.GetAll(page, p => p.Id) ?? new Result<List<Product>>();
