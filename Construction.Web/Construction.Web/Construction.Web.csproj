@@ -292,13 +292,13 @@
     <Compile Include="Models\Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BaseService.cs" />
-    <Compile Include="Service\Fronend\FEProduct_Service.cs" />
-    <Compile Include="Service\Fronend\FEProject_Service .cs" />
-    <Compile Include="Service\Fronend\FESupport_Service.cs" />
+    <Compile Include="Service\Frontend\FEProduct_Service.cs" />
+    <Compile Include="Service\Frontend\FEProject_Service .cs" />
+    <Compile Include="Service\Frontend\FESupport_Service.cs" />
     <Compile Include="Service\Product_Service.cs" />
     <Compile Include="Service\Project_Service.cs" />
     <Compile Include="Service\Category_Service.cs" />
-    <Compile Include="Service\Fronend\Navigation_Service.cs" />
+    <Compile Include="Service\Frontend\Navigation_Service.cs" />
     <Compile Include="Service\Service_Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -1563,26 +1563,8 @@
     <Content Include="Views\Navigation\Breadcrumb.cshtml" />
     <Content Include="Views\_Partial\Items.cshtml" />
     <Content Include="Views\FE_Product\Detail.cshtml" />
-    <Content Include="Views\FE_Product\_RelateItems.cshtml" />
     <Content Include="Views\_Partial\RelateItems.cshtml" />
     <Content Include="Views\FE_Support\Questioner.cshtml" />
-    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
-    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
-    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -28,56 +28,74 @@
                 <br />
                 <form id="form" action="/admin/du-an/save" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
                     @Html.HiddenFor(p => p.Id)
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Tên dự án <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
+                            <label>
+                                Tên dự án <span class="required">*</span>
+                            </label>
+                            <input type="text" id="Name" name="Name" class="form-control" required="required" value="@Model.Name">
+
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Mô tả ngắn
-                        </label>
-                        <div class="col-md-10 col-sm-10 col-xs-12">
-                            <textarea id="ShortDescription" name="ShortDescription" class="form-control col-md-7 col-xs-12" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group">
+                            <label>
+                                Danh mục<span class="required">*</span>
+                            </label>
+                            @Html.DropDownListFor(m => m.CategoryId, Model.ListCategory, "- Chọn danh mục -", new { @class = "form-control", @required = "required" })
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group">
+                            <label>
+                                Dịch vụ<span class="required">*</span>
+                            </label>
+                            @Html.DropDownListFor(m => m.ServiceId, Model.ListService, "- Chọn dịch vụ -", new { @class = "form-control", @required = "required" })
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Mô tả
-                        </label>
-                        <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                                Mô tả ngắn
+                            </label>
+                            <textarea id="ShortDescription" name="ShortDescription" class="form-control" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                                Mô tả
+                            </label>
                             <textarea id="Description" name="Description" required="required">@WebUtility.HtmlDecode(Model.Description)</textarea>
+
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta KeyWord
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Meta Description
+                            </label>
+                            <textarea id="MetaDescription" name="MetaDescription" class="form-control" rows="3">@Model.MetaDescription</textarea>
                         </div>
+
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta Description
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3">@Model.MetaDescription</textarea>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Meta KeyWord
+                            </label>
+                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control" value="@Model.MetaKeyWord">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Kích hoạt
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label style="visibility:hidden">
+                                *
+                            </label>
                             @Html.HiddenFor(p => p.Status)
                             @{
                                 string _checked = Model.Active ? "checked" : "";
                             }
-                            <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
+                            </div>
+
                         </div>
                     </div>
 
@@ -116,11 +134,11 @@
             <div class="x_content">
                 <br />
                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                    <div class="form-group">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            360
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12 form-group">
+                            <label>
+                                360
+                            </label>
                             <div class="input-group file-preview">
                                 <input type="text" class="form-control file-preview-filename" disabled="disabled" />
                                 <div class="input-group-btn">
@@ -143,27 +161,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group update-view">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Thumbnail 390 x 297
-                        </label>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-
-                            <div id="div-thumb" class="thumb-edit dropzone">
-                                <div class="dz-message">
-                                    <div class="drag-icon-cph">
-                                        <i class="fa fa-4x fa-photo"></i>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group update-view">
+                            <label>
+                                Thumbnail 390 x 297
+                            </label>
+                            <div class="text-center">
+                                <div id="div-thumb" class="thumb-edit dropzone">
+                                    <div class="dz-message">
+                                        <div class="drag-icon-cph">
+                                            <i class="fa fa-4x fa-photo"></i>
+                                        </div>
+                                        <h3>Kéo thả hình ảnh.</h3>
+                                        <em></em>
                                     </div>
-                                    <h3>Kéo thả hình ảnh.</h3>
-                                    <em></em>
-                                </div>
-                                <div class="fallback">
-                                    <input id="file_product_img_upload" name="file" type="file" accept="image/*" multiple />
+                                    <div class="fallback">
+                                        <input id="file_product_img_upload" name="file" type="file" accept="image/*" multiple />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>

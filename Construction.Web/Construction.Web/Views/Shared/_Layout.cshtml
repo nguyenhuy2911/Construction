@@ -62,9 +62,7 @@
 				    }
 				};
             scaleFix();
-            $("img").lazyload({
-                effect: "fadeIn",
-            });
+
         })
     </script>
 </head>
@@ -103,5 +101,11 @@
     <script type="text/javascript" src="~/asset/js/jquery.ba-resize.min.js?ver=1.1"></script>
     <script type="text/javascript" src="~/asset/js/jquery.isotope.js?ver=1.5.25"></script>
     <script type="text/javascript" src="~/asset/js/cherry-plugin.js?ver=1.0"></script>
+    <script type="text/javascript" src="~/asset/js/jquery.lazy.js"></script>
+    <script>
+        $(function () {
+            $('img').lazy();
+        });
+    </script>
 </body>
 </html>

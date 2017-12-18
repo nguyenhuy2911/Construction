@@ -10,12 +10,21 @@ using Construction.Web.Areas.Admin.Models.Project;
 using Construction.Web.Common;
 using System.Data.Entity.Core;
 using System.Net;
+using System.Web.Mvc;
 
 namespace Construction.Web.Service
 {
     public class Project_Service : BaseService
     {
-        private readonly DataBaseManager<Project> _projectManager = DataBaseManager<Project>.Create();
+        private readonly DataBaseManager<Project> _projectManager;
+        private readonly DataBaseManager<Category> _categoryManager;
+        private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager;
+        public Project_Service()
+        {
+            _projectManager = DataBaseManager<Project>.Create();
+            _categoryManager = DataBaseManager<Category>.Create();
+            _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
+        }
         public Result<List<Project>> GetPojects(Page page)
         {
             try
@@ -46,6 +55,7 @@ namespace Construction.Web.Service
             }
 
         }
+
         public ProjectCrudViewModel Find(int id)
         {
             var _data = _projectManager.GetById(id);
@@ -60,8 +70,45 @@ namespace Construction.Web.Service
             model.Thumbnail = Url.ProjectImgUrl(_data.Thumbnail);
             model.MetaKeyWord = _data.MetaKeyWord;
             model.MetaDescription = _data.MetaDescription;
+            model.CategoryId = _data.CategoryId;
+            model.ListCategory = this.GetCategorySelectList(_data.CategoryId);
+            model.ServiceId = _data.ServiceId;
+            model.ListService = this.GetServiceSelectList(_data.ServiceId);
             return model;
         }
+
+        private IEnumerable<SelectListItem> GetCategorySelectList(int selectedValue)
+        {
+            var result = new List<SelectListItem>();
+            var data = _categoryManager.GetAll(new Page(0, int.MaxValue), p => p.Id);
+            if (data != null && data.Results != null && data.Results.Count > 0)
+            {
+                result.AddRange(data.Results.Select(p => new SelectListItem()
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Name,
+                    Selected = p.Id.Equals(selectedValue)
+                }).ToList());
+            }
+            return result;
+        }
+
+        private IEnumerable<SelectListItem> GetServiceSelectList(int selectedValue)
+        {
+            var result = new List<SelectListItem>();
+            var data = _serviceManager.GetAll(new Page(0, int.MaxValue), p => p.Id);
+            if (data != null && data.Results != null && data.Results.Count > 0)
+            {
+                result.AddRange(data.Results.Select(p => new SelectListItem()
+                {
+                    Value = p.Id.ToString(),
+                    Text = p.Name,
+                    Selected = p.Id.Equals(selectedValue)
+                }).ToList());
+            }
+            return result;
+        }
+
         public int CreateProject(ProjectCrudViewModel model)
         {
             try
@@ -70,8 +117,8 @@ namespace Construction.Web.Service
                 _saveData.Name = model.Name;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
-                _saveData.CategoryId = 2;
-                _saveData.ServiceId = 2;
+                _saveData.CategoryId = model.CategoryId;
+                _saveData.ServiceId = model.ServiceId;
                 _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
@@ -91,6 +138,7 @@ namespace Construction.Web.Service
             }
 
         }
+
         public Result<Project> UpdateProject(ProjectCrudViewModel model)
         {
             var result = new Result<Project>();
@@ -101,6 +149,8 @@ namespace Construction.Web.Service
                 _saveData.Name = model.Name;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
+                _saveData.CategoryId = model.CategoryId;
+                _saveData.ServiceId = model.ServiceId;
                 _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
