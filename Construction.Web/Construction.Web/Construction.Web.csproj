@@ -1472,6 +1472,7 @@
     <Content Include="asset\js\jquery.form.min.js" />
     <Content Include="asset\js\jquery.isotope.js" />
     <Content Include="asset\js\jquery.jplayer.min.js" />
+    <Content Include="asset\js\jquery.lazy.js" />
     <Content Include="asset\js\jquery.lazyload.js" />
     <Content Include="asset\js\jquery.magnific-popup.min.js" />
     <Content Include="asset\js\jquery.mobilemenu.js" />
