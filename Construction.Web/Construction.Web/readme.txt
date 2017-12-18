@@ -6,3 +6,5 @@ font-family: 'Francois One', sans-serif;
 font-family: 'Oswald', sans-serif;
 font-family: 'Saira Extra Condensed', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;

@@ -3,7 +3,7 @@ body {
 }
 
 .header {
-    background-color: #669d8a;
+    background-color: #2a2844;  /*#669d8a;*/
 }
 
 .cherry-fixed-layout .main-holder {
@@ -37,7 +37,7 @@ h5 {
 
 h6 {
      font: normal 20px/20px Oswald;
-    color: #2f2f2f;
+    color: #b55353;
 }
 
 body {

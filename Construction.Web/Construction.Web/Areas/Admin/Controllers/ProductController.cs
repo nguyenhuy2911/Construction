@@ -24,13 +24,13 @@ namespace Construction.Web.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var model = new ProductViewModel();
-            ViewBag.Title = "Danh sách Sản phẩm";
+            ViewBag.Title = "Danh sách mẫu thiết kế";
             return View(model);
         }
 
         [HttpPost]
         [Route("get-list")]
-        public string GetServices(ProductViewModel model)
+        public string GetProducts(ProductViewModel model)
         {
             var data = _project_Service.GetProducts(model.Page);
             string jsonData = JsonConvert.SerializeObject(data);
@@ -43,7 +43,7 @@ namespace Construction.Web.Areas.Admin.Controllers
         public ActionResult Create()
         {
             var model = new ProductCrudViewModel();
-            ViewBag.Title = "Thêm mới sản phẩm";
+            ViewBag.Title = "Thêm mới mẫu thiết kế";
             return View("~/Areas/Admin/Views/Product/Crud.cshtml", model);
         }
 
@@ -54,7 +54,7 @@ namespace Construction.Web.Areas.Admin.Controllers
         {
             var model = new ProductCrudViewModel();
             model = _project_Service.Find(id);
-            ViewBag.Title = "Cập nhật sản phẩm";
+            ViewBag.Title = "Cập nhật mẫu thiết kế";
             return View("~/Areas/Admin/Views/Product/Crud.cshtml", model);
         }
 

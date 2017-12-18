@@ -20,7 +20,21 @@ namespace Construction.Web.Service
         {
             try
             {
-                return _projectManager.GetAll(page, p => p.Id);
+                var data = _projectManager.GetAll(page, p => p.Id);
+                if (data.Results != null && data.Results.Count > 0)
+                {
+                    var listItem = data.Results.Select(p => new Project
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Alias = p.Alias,
+                        Status = p.Status,
+                        Thumbnail = Url.ProjectImgUrl(p.Thumbnail),
+
+                    }).ToList();
+                    data.Results = listItem;
+                }
+                return data;
             }
             catch (EntityException ex)
             {
@@ -40,6 +54,12 @@ namespace Construction.Web.Service
             model.Name = _data.Name;
             model.Alias = _data.Alias;
             model.Status = _data.Status;
+            model.ShortDescription = _data.ShortDescription;
+            model.Description = _data.Description;
+            model.Link = Url.Project360Url(_data.Link);
+            model.Thumbnail = Url.ProjectImgUrl(_data.Thumbnail);
+            model.MetaKeyWord = _data.MetaKeyWord;
+            model.MetaDescription = _data.MetaDescription;
             return model;
         }
         public int CreateProject(ProjectCrudViewModel model)
@@ -52,6 +72,7 @@ namespace Construction.Web.Service
                 _saveData.Status = model.Status;
                 _saveData.CategoryId = 2;
                 _saveData.ServiceId = 2;
+                _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
@@ -70,8 +91,9 @@ namespace Construction.Web.Service
             }
 
         }
-        public int UpdateProject(ProjectCrudViewModel model)
+        public Result<Project> UpdateProject(ProjectCrudViewModel model)
         {
+            var result = new Result<Project>();
             try
             {
                 var _saveData = new Project();
@@ -79,24 +101,91 @@ namespace Construction.Web.Service
                 _saveData.Name = model.Name;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
+                _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
-                _saveData.Thumbnail = string.Format("{0}/{1}.{2}", _saveData.Id, _saveData.Alias, "png");
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
                 _projectManager.Update(_saveData);
                 _projectManager.Save();
-                if (model.FileCollection != null && model.FileCollection.Count > 0)
-                    UploadFile.UploadProjectImage(model.FileCollection, _saveData.Alias, _saveData.Id.ToString());
-                return _saveData.Id;
+                return result = new Result<Project>()
+                {
+                    StatusCode = 0,
+                    Results = _saveData,
+                };
             }
             catch (EntityException ex)
             {
-                return 0;
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                
+                return result;
+            }
+
+        }
+
+        public Result<Project> UploadImage(ProjectCrudViewModel model)
+        {
+            var result = new Result<Project>();
+            try
+            {
+                var _saveData = new Project();
+                _saveData = _projectManager.GetById(model.Id);
+                if (model.FileCollection != null && model.FileCollection.Count > 0)
+                {
+                    _saveData.Thumbnail = string.Format("{0}/{1}.{2}", _saveData.Id, _saveData.Alias, "png");
+                    UploadFile.UploadProjectImage(model.FileCollection, _saveData.Alias, _saveData.Id.ToString());
+                }
+                _projectManager.Update(_saveData);
+                _projectManager.Save();
+                return result = new Result<Project>()
+                {
+                    StatusCode = 0,
+                    Results = _saveData,
+                };
+            }
+            catch (EntityException ex)
+            {
+                return result;
             }
             catch (Exception ex)
             {
 
-                return 0;
+                return result;
+            }
+
+        }
+
+        public Result<Project> Upload360(ProjectCrudViewModel model)
+        {
+            var result = new Result<Project>();
+            try
+            {
+                var _saveData = new Project();
+                _saveData = _projectManager.GetById(model.Id);
+                if (model.File_360 != null && !string.IsNullOrEmpty(model.File_360.FileName))
+                {
+                    _saveData.Link = string.Format("{0}/{1}.{2}", _saveData.Id.ToString(), _saveData.Alias, "html");
+                    UploadFile.UploadProJect360File(model.File_360, _saveData.Alias, _saveData.Id.ToString());
+                }
+                _projectManager.Update(_saveData);
+                _projectManager.Save();
+                return result = new Result<Project>()
+                {
+                    StatusCode = 0,
+                    Results = _saveData,
+                };
+            }
+            catch (EntityException ex)
+            {
+                return result;
+            }
+            catch (Exception ex)
+            {
+
+                return result;
             }
 
         }

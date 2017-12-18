@@ -13,6 +13,11 @@ namespace Construction.Web.Common
             return !string.IsNullOrEmpty(sortPath) ? url.Content("~/uploads/images/project/" + sortPath) : "";
         }
 
+        public static string Project360Url(this UrlHelper url, string sortPath)
+        {
+            return !string.IsNullOrEmpty(sortPath) ? url.Content("~/uploads/360/project/" + sortPath) : "";
+        }
+
         public static string ProductImgUrl(this UrlHelper url, string sortPath)
         {
             return !string.IsNullOrEmpty(sortPath) ? url.Content("~/uploads/images/product/" + sortPath) : "";

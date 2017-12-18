@@ -28,7 +28,7 @@ namespace Construction.Domain.Models
 
         public int Status { get; set; }
 
-        [MaxLength(250)]
+        [AllowHtml]
         public string ShortDescription { get; set; }
 
         [AllowHtml]

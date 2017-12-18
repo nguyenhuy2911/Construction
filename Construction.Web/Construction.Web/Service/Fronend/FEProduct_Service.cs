@@ -11,7 +11,11 @@ namespace Construction.Web.Service.FrontEnd
 {
     public class FEProduct_Service : BaseService
     {
-        private readonly DataBaseManager<Product> _productManager = DataBaseManager<Product>.Create();
+        private readonly DataBaseManager<Product> _productManager ;
+        public FEProduct_Service()
+        {
+            _productManager = DataBaseManager<Product>.Create();
+        }
         public Product_HomeItemsViewModel GetHomeItems()
         {
             int activeStatus = (int)ACTIVE_TYPE.ACTIVE;

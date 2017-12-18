@@ -8,13 +8,11 @@ namespace Construction.Domain.Infrastructure
 {
     public partial class DatabaseContext : DbContext
     {
-        static DatabaseContext()
-        {
-            Database.SetInitializer(new DataContextDBInitializer());
-        }
-
         public DatabaseContext(): base("Name=DatabaseContext")
         {
+            //Database.SetInitializer(new DataContextDBInitializer());
+            Database.SetInitializer<DatabaseContext>(null);
+            this.Configuration.LazyLoadingEnabled = true;
         }
         public virtual void Commit()
         {
@@ -27,7 +25,9 @@ namespace Construction.Domain.Infrastructure
         public DbSet<Setting> Settings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {            
+        {
+            //base.OnModelCreating(modelBuilder);
+            //modelBuilder.Conventions.Remove<IncludeMetadataConvention>();
         }
     }
 }
