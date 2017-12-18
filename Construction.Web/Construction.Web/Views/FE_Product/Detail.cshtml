@@ -7,9 +7,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="span12" data-motopress-wrapper-file="single-portfolio.php" data-motopress-wrapper-type="content">
+        <div class="span12">
             <div class="row">
-                <div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-title.php">
+                <div class="span12">
                     <section class="title-section">
                         <h1 class="title-header">
                             @Model.Item.Name
@@ -19,8 +19,9 @@
                 </div>
             </div>
             <div id="content" class="row">
-                <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-single-portfolio.php">
+                <div class="span12">
                     <div class="portfolio type-portfolio status-publish hentry">
+                       
                         <div class="row">
                             <div class="span12">
                                 @if (!string.IsNullOrEmpty(Model.Item.Link))

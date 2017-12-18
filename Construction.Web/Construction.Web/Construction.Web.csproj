@@ -283,6 +283,8 @@
     <Compile Include="Models\FE_Product\Product_Detail_ViewModel.cs" />
     <Compile Include="Models\FE_Product\Product_ItemsViewModel.cs" />
     <Compile Include="Models\FE_Product\Product_HomeItemsViewModel.cs" />
+    <Compile Include="Models\FE_Project\Project_Detail_ViewModel.cs" />
+    <Compile Include="Models\FE_Project\Project_ItemsViewModel.cs" />
     <Compile Include="Models\FE_Project\Project_HomeItemsViewModel.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -1426,6 +1428,10 @@
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\richcombo.css" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\skin.js" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Areas\Admin\script\Product\Product.js" />
+    <Content Include="Areas\Admin\script\Product\Product_Crud.js" />
+    <Content Include="Areas\Admin\script\Project\Project.js" />
+    <Content Include="Areas\Admin\script\Project\Project_Crud.js" />
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
@@ -1595,7 +1601,8 @@
     <Content Include="Areas\Admin\Views\Project\Crud.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Navigation\NaviBar.cshtml" />
-    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <Content Include="Views\FE_Project\Index.cshtml" />
+    <Content Include="Views\FE_Project\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Construction.Domain\Construction.Domain.csproj">

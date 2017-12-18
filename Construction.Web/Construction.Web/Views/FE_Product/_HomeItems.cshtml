@@ -3,6 +3,7 @@
 }
 @model Construction.Web.Models.Product_HomeItemsViewModel
 @using Construction.Web.Common
+@using Construction.Domain.Helper
 @{
     int itemPerRow = 3;
     decimal row = (decimal)Model.Items.Count / (decimal)itemPerRow;
@@ -10,7 +11,7 @@
 }
 <div class="row">
     <div class="span12">
-        <h1>Sản phẩm</h1>
+        <h1>Mẫu thiết kế</h1>
         @for (int i = 0; i < row; i++)
         {
             <ul class="posts-grid row-fluid unstyled gallery-home">
@@ -23,7 +24,7 @@
                     }
                     <li class="span4">
                         <figure class="featured-thumbnail thumbnail">
-                            <a href="#" title="@Model.Items[index].Name">
+                            <a href="@Url.RouteUrl("ProductDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">
                                 <img src="@Url.ProductImgUrl(Model.Items[index].Thumbnail)" alt="@Model.Items[index].Name" style="width:390px; height:297px;">
                                 <span class="zoom-icon"></span>
                             </a>
@@ -32,17 +33,18 @@
                         <div class="desc">
                             <div class="title-part">
                                 <h5>
-                                    <a href="#" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
-                                </h5><p class="excerpt">@Model.Items[index].ShortDescription ... </p>
+                                    <a href="@Url.RouteUrl("ProductDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
+                                </h5>
+                                <p class="excerpt">@Html.Raw(WebUtility.HtmlDecode(@Model.Items[index].ShortDescription.LimitTo(100))) </p>
                             </div>
-                            <div class="price">$343`000</div>
+                            @*<div class="price">$343`000</div>*@
                         </div>
                     </li>
                 }
             </ul>
         }
-        <a href="/san-pham" title="view all projects" class="btn btn-default btn-normal btn-inline btn-margin-top pull-right" target="_self">
-            <i class="fa fa-hand-o-right" aria-hidden="true"></i> Xem tất cả sản phẩm
+        <a href="@Url.RouteUrl("Product")" title="view all projects" class="btn btn-default btn-normal btn-inline btn-margin-top pull-right" target="_self">
+            <i class="fa fa-hand-o-right" aria-hidden="true"></i> Xem tất cả các mẫu thiết kế
         </a>
     </div>
 </div>

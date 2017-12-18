@@ -1,5 +1,6 @@
 ﻿using Construction.Web.Areas.Admin.Models.Project;
 using Construction.Web.Areas.Admin.Models.Service;
+using Construction.Web.Common;
 using Construction.Web.Service;
 using Newtonsoft.Json;
 using System;
@@ -30,7 +31,7 @@ namespace Construction.Web.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("get-list")]
-        public string GetServices(ProjectViewModel model)
+        public string GetProjects(ProjectViewModel model)
         {
             var data = _project_Service.GetPojects(model.Page);
             string jsonData = JsonConvert.SerializeObject(data);
@@ -66,7 +67,8 @@ namespace Construction.Web.Areas.Admin.Controllers
            
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
-                id = _project_Service.UpdateProject(model);
+                _project_Service.UpdateProject(model);
+                id = model.Id;
             }
             else
             {              
@@ -82,8 +84,20 @@ namespace Construction.Web.Areas.Admin.Controllers
         {
             var model = _project_Service.Find(id);
             model.FileCollection = Request.Files;
-            _project_Service.UpdateProject(model);
+            _project_Service.UploadImage(model);
             return 0;
+        }
+
+        [HttpPost]
+        [Route("upload-360")]
+        public string Upload360(int id)
+        {
+            var model = _project_Service.Find(id);
+            model.File_360 = Request.Files["File_360"];
+            var data = _project_Service.Upload360(model);
+            data.Results.Link = this.Url.Project360Url(data.Results.Link);
+            string json = JsonConvert.SerializeObject(data);
+            return json;
         }
     }
 }

@@ -3,6 +3,7 @@
 }
 @model Construction.Web.Models.Project_HomeItemsViewModel
 @using Construction.Web.Common
+@using Construction.Domain.Helper;
 @{
     int itemPerRow = 2;
     decimal row = (decimal)Model.Items.Count / (decimal)itemPerRow;
@@ -24,7 +25,7 @@
 
                     <li class="span6">
                         <figure class="featured-thumbnail thumbnail">
-                            <a href="" title="@Model.Items[index].Name">
+                            <a href="@Url.RouteUrl("ProjectDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">
                                 <img src="@Url.ProjectImgUrl(Model.Items[index].Thumbnail)" style="width:292px; height:294px;" alt="@Model.Items[index].Name">
                                 <span class="zoom-icon"></span>
                             </a>
@@ -32,15 +33,17 @@
                         <div class="clear"></div>
                         <div class="desc">
                             <div class="title-part">
-                                <h5><a href="" title="@Model.Items[index].Name">@Model.Items[index].Name</a></h5>
-                                <p class="excerpt">@Model.Items[index].ShortDescription ... </p>
+                                <h5>
+                                <a href="@Url.RouteUrl("ProjectDetail", new { alias = Model.Items[index].Alias, id= Model.Items[index].Id })" title="@Model.Items[index].Name">@Model.Items[index].Name</a>
+                                </h5>
+                                <p class="excerpt">@Html.Raw(WebUtility.HtmlDecode(Model.Items[index].ShortDescription.LimitTo(100)))</p>
                             </div>
                         </div>
                     </li>
                 }
             </ul>
         }
-        <a href="#/" title="view all projects" class="btn btn-default btn-normal btn-inline btn-margin-top pull-right" target="_self">
+        <a href="/du-an" title="view all projects" class="btn btn-default btn-normal btn-inline btn-margin-top pull-right" target="_self">
             <i class="fa fa-hand-o-right" aria-hidden="true"></i> Xem tất cả dự án
         </a>
     </div>

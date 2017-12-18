@@ -36,28 +36,17 @@
                             <input type="text" id="Name" name="Name" required="required" class="form-control col-md-7 col-xs-12" value="@Model.Name">
                         </div>
                     </div>
-                    <div class="form-group update-view">
+                    <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Thumbnail 292 x 294
+                            Mô tả ngắn
                         </label>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-                            <div id="div-thumb" class="thumb-edit dropzone">
-                                <div class="dz-message">
-                                    <div class="drag-icon-cph">
-                                        <i class="fa fa-4x fa-photo"></i>
-                                    </div>
-                                    <h3>Kéo thả hình ảnh.</h3>
-                                    <em></em>
-                                </div>
-                                <div class="fallback">
-                                    <input id="file_product_img_upload" name="file" type="file" accept="image/*" multiple />
-                                </div>
-                            </div>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                            <textarea id="ShortDescription" name="ShortDescription" class="form-control col-md-7 col-xs-12" rows="10">@WebUtility.HtmlDecode(Model.ShortDescription)</textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Mô tả <span class="required">*</span>
+                            Mô tả
                         </label>
                         <div class="col-md-10 col-sm-10 col-xs-12">
                             <textarea id="Description" name="Description" required="required">@WebUtility.HtmlDecode(Model.Description)</textarea>
@@ -65,18 +54,18 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta KeyWord 
+                            Meta KeyWord
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="MetaKeyWord" name="MetaKeyWord"  class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
+                            <input type="text" id="MetaKeyWord" name="MetaKeyWord" class="form-control col-md-7 col-xs-12" value="@Model.MetaKeyWord">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
-                            Meta Description 
+                            Meta Description
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3" >@Model.MetaDescription</textarea>
+                            <textarea id="MetaDescription" name="MetaDescription" class="form-control col-md-7 col-xs-12" rows="3">@Model.MetaDescription</textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -91,7 +80,7 @@
                             <input id="chk-status" data-onstyle="success" data-offstyle="danger" @_checked type="checkbox">
                         </div>
                     </div>
-                    
+
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 text-left">
@@ -99,7 +88,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 text-right">
                             <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> làm mới</button>
-                            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Lưu</button>
+                            <button type="submit" class="btn btn-success btn-loadding"><span class="glyphicon glyphicon-ok" aria-hidden="true" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing"></span> Lưu</button>
                         </div>
                     </div>
 
@@ -108,95 +97,83 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Upload Files</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
+                            360
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="input-group file-preview">
+                                <input type="text" class="form-control file-preview-filename" disabled="disabled" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default clear-upload-file" style="display:none;">
+                                        <span class="glyphicon glyphicon-remove"></span> Clear
+                                    </button>
+                                    <div class="btn btn-default file-preview-input">
+                                        <span class="glyphicon glyphicon-folder-open"></span>
+                                        <span class="file-preview-input-title">Browse</span>
+                                        <input type="file" accept="application/zip" id="File_360" name="File_360" />
+                                    </div>
+                                    <button type="button" id="Upload360" class="btn btn-labeled btn-primary btn-loadding" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing">
+                                        <span class="glyphicon glyphicon-upload"></span>
+                                        Upload
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="js-upload-finished">
+                                <div class="list-360file"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group update-view">
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">
+                            Thumbnail 390 x 297
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+
+                            <div id="div-thumb" class="thumb-edit dropzone">
+                                <div class="dz-message">
+                                    <div class="drag-icon-cph">
+                                        <i class="fa fa-4x fa-photo"></i>
+                                    </div>
+                                    <h3>Kéo thả hình ảnh.</h3>
+                                    <em></em>
+                                </div>
+                                <div class="fallback">
+                                    <input id="file_product_img_upload" name="file" type="file" accept="image/*" multiple />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     var id = @Model.Id;
-    $(function () {
-        if (id > 0)
-            $(".update-view").show()
-        else
-            $(".update-view").hide()
-
-        $('#chk-status').bootstrapToggle({
-            on: 'Kích hoạt',
-            off: 'Khóa'
-        });
-        $('#chk-status').change(function () {
-            if ($(this).prop('checked') == true)
-                $("#Status").val(ACTIVE_TYPE.ACTIVE)
-            else
-                $("#Status").val(ACTIVE_TYPE.BLOCK)
-        })
-    })
-    var editor = CKEDITOR.replace('Description');
-
-    var myDropzone = new Dropzone("div#div-thumb", {
-        autoProcessQueue: true,
-        url: "/admin/du-an/save-image",
-        params: {id:id},
-        acceptedFiles: "image/jpeg, image/jpg, image/png",
-        parallelUploads: 1,
-        maxFiles: 1,
-        uploadMultiple: false,
-        addRemoveLinks: true,
-        thumbnailWidth: 250,
-        thumbnailHeight: 250,
-        init: function () {
-            var thisDropzone = this;
-            //if (listImage != null) {
-            //    $.each(listImage, function (index, item) {
-
-            //        var mockFile = {
-            //            name: item.Name,
-            //            id: item.Id,
-            //            path: item.Path,
-            //            //  size: 9000000,
-            //            accepted: true,
-            //            kind: 'image'
-            //        };
-            //        // Call the default addedfile event handler
-            //        thisDropzone.options.addedfile.call(thisDropzone, mockFile);
-
-            //        // And optionally show the thumbnail of the file:ss
-            //        thisDropzone.files.push(mockFile);
-            //        thisDropzone.createThumbnailFromUrl(mockFile, "images-handle/get-image?path=" + item.Path + "&w=240&h=240", function () {
-            //            // thisDropzone.emit("complete", mockFile);
-            //        }, "anonymous");
-            //        thisDropzone.emit("success", mockFile);
-            //        thisDropzone.emit("complete", mockFile);
-            //        //    thisDropzone.uploadFiles([mockFile])
-
-            //    });
-            //}
-
-        },
-        //    removedfile: function (file, _) {
-        //        $.ajax({
-        //            type: "POST",
-        //            url: "/images/delete-image",
-        //            data: { id: file.id },
-        //            dataType: "json",
-        //            success: function (response) {
-        //                if (response.StatusCode != 0)
-        //                    showErrorMessage(response.StatusMessage, "#div-crud-modal");
-        //                else {
-        //                    showSuccessMessage(response.StatusMessage, "#div-crud-modal");
-        //                    var _ref;
-        //                    if (file.previewElement) {
-        //                        if ((_ref = file.previewElement) != null) {
-        //                            _ref.parentNode.removeChild(file.previewElement);
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        });
-        //        return this._updateMaxFilesReachedClass();
-        //    },
-
-    });
-    myDropzone.on("maxfilesexceeded", function (file) {
-        myDropzone.removeFile(file);
-    });
-
-
-
+    var productName = '@Model.Name';
+    var thumbImg = '@Model.Thumbnail';
+    var Link_360 = '@Model.Link';
 </script>
+<script src="~/Areas/Admin/script/Project/Project_Crud.js"></script>

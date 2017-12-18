@@ -1,5 +1,5 @@
 @import url("style.css");
-@import url(//fonts.googleapis.com/css?family=Francois+One|Oswald|Roboto+Condensed|Saira+Extra+Condensed);
+@import url(//fonts.googleapis.com/css?family=Francois+One|Oswald|Roboto+Condensed:300|Saira+Extra+Condensed|Fira+Sans:300|Yanone+Kaffeesatz:300|Play);
 
 .main-holder {
     overflow: hidden;
@@ -204,7 +204,7 @@ img.size-full {
 .btn, .reply a {
     border-radius: 0;
     border: none;
-    color: #2196f3;
+    color: #607D8B;
     text-shadow: none;
     /*font: 20px/1.2em 'JOswald', sans-serif;*/
     /*text-transform: uppercase;*/
@@ -1944,7 +1944,7 @@ div.type-page p {
 }
 
 .posts-grid.featured-home li {
-    background: #f7d66c;
+    background: #2a2844;
     width: 50%;
     margin: 0;
     transition: all 0.3s ease 0s;
@@ -2048,8 +2048,7 @@ div.type-page p {
 
 .posts-grid.featured-home li .desc .excerpt {
     margin: 0;
-    color: #fff6da;
-    font: 14px/1.2em 'PT Sans', sans-serif;
+    color: #fff6da;  
     transition: all 0.3s ease 0s;
 }
 

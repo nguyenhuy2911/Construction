@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Construction.Web.Models.Project_ItemsViewModel
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                <div class="span12">
+                    <section class="title-section">
+                        <h1 class="title-header">
+                            Dự án
+                        </h1>
+                        @Html.Action("Breadcrumb", "Navigation")
+                    </section>
+                </div>
+            </div>
+            <div id="content" class="row">
+                <div class="span12" data-motopress-type="loop" data-motopress-loop-file="loop/loop-portfolio3.php">
+                    <div class="page_content">
+                        <div class="clear"></div>
+                    </div>
+                    <div class="filter-wrapper clearfix">
+                        <div class="pull-right">
+                            <strong>Categories: </strong>
+                            <ul id="filters" class="filter nav nav-pills">
+                                <li class="active"><a href="#" data-count="22" data-filter="">Show All</a></li>
+                                <li class=""><a href="#" data-count="7" data-filter=".term_id_20">Category #1</a></li>
+                                <li class=""><a href="#" data-count="12" data-filter=".term_id_21">Category #2</a></li>
+                                <li><a href="#" data-count="9" data-filter=".term_id_22">Category #3</a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    @Html.Partial("~/Views/_Partial/Items.cshtml", Model.Data)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

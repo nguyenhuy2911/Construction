@@ -22,7 +22,12 @@ namespace Construction.Web.Common
             }
         }
 
-        
+        public static void UploadProJect360File(HttpPostedFileBase file, string fileName, string uniqueFolder)
+        {
+            string path = string.Format(@"~\uploads\360\project\{0}", uniqueFolder);
+            file.UploadExtractZipFile(fileName, path);
+
+        }
 
         public static void UploadProductImage(HttpFileCollectionBase fileCollection, string fileName, string uniqueFolder)
         {

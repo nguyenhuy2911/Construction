@@ -15,7 +15,13 @@ namespace Construction.Web.Service
 {
     public class Product_Service : BaseService
     {
-        private readonly DataBaseManager<Product> _productManager = DataBaseManager<Product>.Create();
+        private readonly DataBaseManager<Product> _productManager;
+
+        public Product_Service()
+        {
+            _productManager = DataBaseManager<Product>.Create();
+        }
+
         private readonly DataBaseManager<Category> _categoryManager = DataBaseManager<Category>.Create();
         private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
         public Result<List<Product>> GetProducts(Page page)
@@ -23,14 +29,14 @@ namespace Construction.Web.Service
             var data = _productManager.GetAll(page, p => p.Id) ?? new Result<List<Product>>();
             if (data.Results != null && data.Results.Count > 0)
             {
-                var listItem = data.Results.Select(p =>
-                new Product
+                var listItem = data.Results.Select(p => new Product
                 {
                     Id = p.Id,
                     Name = p.Name,
                     Alias = p.Alias,
                     Status = p.Status,
                     Thumbnail = Url.ProductImgUrl(p.Thumbnail),
+
                 }).ToList();
                 data.Results = listItem;
             }
@@ -47,7 +53,7 @@ namespace Construction.Web.Service
             model.Status = _data.Status;
             model.ShortDescription = _data.ShortDescription;
             model.Description = _data.Description;
-            model.Link = _data.Link;
+            model.Link = Url.Product360Url(_data.Link);
             model.Thumbnail = Url.ProductImgUrl(_data.Thumbnail);
             model.CategoryId = _data.CategoryId;
             model.ListCategory = this.GetCategorySelectList(_data.CategoryId);
@@ -98,6 +104,7 @@ namespace Construction.Web.Service
                 _saveData.Status = model.Status;
                 _saveData.CategoryId = model.CategoryId;
                 _saveData.ServiceId = model.ServiceId;
+                _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
@@ -129,11 +136,12 @@ namespace Construction.Web.Service
                 _saveData.ServiceId = model.ServiceId;
                 _saveData.Alias = model.Name.GenerateFriendlyName();
                 _saveData.Status = model.Status;
+                _saveData.ShortDescription = WebUtility.HtmlEncode(model.ShortDescription);
                 _saveData.Description = WebUtility.HtmlEncode(model.Description);
                 _saveData.MetaKeyWord = model.MetaKeyWord;
                 _saveData.MetaDescription = model.MetaDescription;
-                _productManager.Update(_saveData);                
-                _productManager.Save();            
+                _productManager.Update(_saveData);
+                _productManager.Save();
                 return result = new Result<Product>()
                 {
                     StatusCode = 0,

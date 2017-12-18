@@ -24,7 +24,7 @@ namespace Construction.Web
             /* ****************************************** Product ***************************************************/
             routes.MapRoute(
                name: "ProductDetail",
-               url: "san-pham/{alias}-{id}",
+               url: "mau-thiet-ke/{alias}-{id}",
                defaults: new
                {
                    controller = "FE_Product",
@@ -37,12 +37,36 @@ namespace Construction.Web
 
             routes.MapRoute(
                name: "Product",
-               url: "san-pham/{pageNumber}",
+               url: "mau-thiet-ke/{pageNumber}",
                defaults: new { controller = "FE_Product", action = "Index", pageNumber = UrlParameter.Optional },
                namespaces: new[] { "Construction.Web.Controllers" }
             );
 
-                     
+
+
+            /* ******************************************  ***************************************************/
+
+            /* ****************************************** Project ***************************************************/
+
+            routes.MapRoute(
+               name: "ProjectDetail",
+               url: "du-an/{alias}-{id}",
+               defaults: new
+               {
+                   controller = "FE_Project",
+                   action = "Detail",
+                   alias = UrlParameter.Optional,
+                   id = UrlParameter.Optional
+               },
+               namespaces: new[] { "Construction.Web.Controllers" }
+            );
+
+            routes.MapRoute(
+               name: "Project",
+               url: "du-an/{pageNumber}",
+               defaults: new { controller = "FE_Project", action = "Index", pageNumber = UrlParameter.Optional },
+               namespaces: new[] { "Construction.Web.Controllers" }
+            );
 
             /* ******************************************  ***************************************************/
             routes.MapRoute(
