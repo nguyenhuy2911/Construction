@@ -2031,7 +2031,7 @@ div.type-page p {
 
 .posts-grid.featured-home li .desc h5 {
     font: 22px/1em 'Oswald', sans-serif;
-    font-size:22px/1em;
+    font-size: 22px/1em;
     text-transform: uppercase;
     margin-bottom: 4px;
 }
@@ -2048,7 +2048,7 @@ div.type-page p {
 
 .posts-grid.featured-home li .desc .excerpt {
     margin: 0;
-    color: #fff6da;  
+    color: #fff6da;
     transition: all 0.3s ease 0s;
 }
 
@@ -2091,7 +2091,6 @@ div.type-page p {
         .testimonials .testi-item .testi-item_blockquote:after {
             background: none;
             content: '“';
-            
             font: 82px/1em 'Oswald', sans-serif;
             color: #d2d2d2;
             left: 22px;
@@ -2681,4 +2680,55 @@ blockquote p {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.feature-2 {
+    margin-bottom: 30px;
+    padding: 15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+    .feature-2:hover {
+        background: #f6d014;
+    }
+
+    .feature-2 .media-body {
+        padding-left: 10px;
+    }
+
+        .feature-2 .media-body h3 {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #000;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.home-introdure .wow {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
 }

@@ -271,6 +271,7 @@
     <Compile Include="Common\UploadFile.cs" />
     <Compile Include="Common\UrlHelperExtentions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FE_ServiceController.cs" />
     <Compile Include="Controllers\FE_ProductController.cs" />
     <Compile Include="Controllers\FE_ProjectController.cs" />
     <Compile Include="Controllers\FE_SupportController.cs" />
@@ -1432,6 +1433,7 @@
     <Content Include="Areas\Admin\script\Product\Product_Crud.js" />
     <Content Include="Areas\Admin\script\Project\Project.js" />
     <Content Include="Areas\Admin\script\Project\Project_Crud.js" />
+    <Content Include="asset\css\animate.css" />
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
@@ -1479,6 +1481,7 @@
     <Content Include="asset\js\scripts.js" />
     <Content Include="asset\js\superfish.js" />
     <Content Include="asset\js\swfobject.js" />
+    <Content Include="asset\js\wow.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -1555,10 +1558,10 @@
     <Content Include="Areas\Admin\asset\lib\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\userfiles\.htaccess" />
-    <Content Include="Views\FE_Project\_HomeItems.cshtml" />
+    <Content Include="Views\FE_Project\HomeItems.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Crud.cshtml" />
-    <Content Include="Views\FE_Product\_HomeItems.cshtml" />
+    <Content Include="Views\FE_Product\HomeItems.cshtml" />
     <Content Include="Views\FE_Product\Index.cshtml" />
     <Content Include="Views\Navigation\Breadcrumb.cshtml" />
     <Content Include="Views\_Partial\Items.cshtml" />
@@ -1585,6 +1588,7 @@
     <Content Include="Views\Navigation\NaviBar.cshtml" />
     <Content Include="Views\FE_Project\Index.cshtml" />
     <Content Include="Views\FE_Project\Detail.cshtml" />
+    <Content Include="Views\FE_Service\HomeItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Construction.Domain\Construction.Domain.csproj">

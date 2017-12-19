@@ -158,3 +158,4 @@ E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.xml
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\lip cms\Contruction\Construction.Web\Construction.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Working\Git\Construction\Construction.Web\Construction.Domain\obj\Debug\Construction.Domain.csprojResolveAssemblyReference.cache
