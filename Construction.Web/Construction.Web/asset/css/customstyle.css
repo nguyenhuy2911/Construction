@@ -104,3 +104,11 @@ img[alt]:after {
   text-align: center;
   content: attr(alt);
 }
+.animagion {
+    -webkit-animation-name: animagion;
+    animation-name: animagion;
+}
+.animagionTop {
+    -webkit-animation-name: animagionTop;
+    animation-name: animagionTop;
+}
