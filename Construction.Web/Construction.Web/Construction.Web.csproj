@@ -293,12 +293,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\Frontend\FEProduct_Service.cs" />
-    <Compile Include="Service\Frontend\FEProject_Service .cs" />
+    <Compile Include="Service\Frontend\FEProject_Service.cs" />
     <Compile Include="Service\Frontend\FESupport_Service.cs" />
+    <Compile Include="Service\Frontend\Navigation_Service.cs" />
     <Compile Include="Service\Product_Service.cs" />
     <Compile Include="Service\Project_Service.cs" />
     <Compile Include="Service\Category_Service.cs" />
-    <Compile Include="Service\Frontend\Navigation_Service.cs" />
     <Compile Include="Service\Service_Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -1435,6 +1435,7 @@
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
+    <Content Include="asset\css\flaticon.css" />
     <Content Include="asset\css\flexslider.css" />
     <Content Include="asset\css\magnific-popup.css" />
     <Content Include="asset\css\main-style.css" />
@@ -1472,8 +1473,6 @@
     <Content Include="asset\js\jquery.form.min.js" />
     <Content Include="asset\js\jquery.isotope.js" />
     <Content Include="asset\js\jquery.jplayer.min.js" />
-    <Content Include="asset\js\jquery.lazy.js" />
-    <Content Include="asset\js\jquery.lazyload.js" />
     <Content Include="asset\js\jquery.magnific-popup.min.js" />
     <Content Include="asset\js\jquery.mobilemenu.js" />
     <Content Include="asset\js\modernizr.js" />
