@@ -8,30 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" type="text/css" media="all" href="~/asset/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="all" href="~/asset/css/responsive.css">
-    <link rel="stylesheet" type="text/css" media="all" href="~/asset/css/camera.css">
-
-    <link rel="stylesheet" href="~/asset/css/flexslider.css?ver=2.0" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/owl.carousel.css?ver=1.24" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/owl.theme.css?ver=1.24" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/font-awesome/css/font-awesome.css" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/cherry-plugin.css?ver=1.0" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/main-style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/magnific-popup.css?ver=0.9.3" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/customstyle.css?ver=0.9.3" type="text/css" media="all">
-    <link rel="stylesheet" href="~/asset/css/flaticon.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="~/asset/css/animate.css" type="text/css" media="all" />
-
-    <script type="text/javascript" src="~/asset/js/comment-reply.min.js?ver=3.6"></script>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Francois+One|Oswald|Roboto+Condensed:300|Saira+Extra+Condensed|Fira+Sans:300|Yanone+Kaffeesatz:300|Play" type="text/css" media="all">
     <script type="text/javascript" src="~/asset/js/jquery-1.7.2.min.js?ver=1.7.2"></script>
-    <script type="text/javascript" src="~/asset/js/jquery-extra-selectors.js?ver=1.0"></script>
-    <script type="text/javascript" src="~/asset/js/swfobject.js?ver=2.2-20120417"></script>
-    <script type="text/javascript" src="~/asset/js/modernizr.js?ver=2.0.6"></script>
-    <script type="text/javascript" src="~/asset/js/jflickrfeed.js?ver=1.0"></script>
-    <script type="text/javascript" src="~/asset/js/bootstrap.min.js?ver=2.3.0"></script>
-
 
     <script type="text/javascript">
         jQuery(function () {
@@ -66,7 +45,6 @@
         })
     </script>
 </head>
-
 <body class="home page">
     <div id="motopress-main" class="main-holder">
         <header class="motopress-wrapper header">
@@ -79,13 +57,17 @@
         <footer class="motopress-wrapper footer">
             @Html.Partial("~/Views/Shared/_Footer.cshtml")
         </footer>
-        <!--End #motopress-main-->
     </div>
     <div id="back-top-wrapper" class="visible-desktop">
         <p id="back-top" style="display: none;">
             <a href="#top"><span></span></a>
         </p>
     </div>
+    <script type="text/javascript" src="~/asset/js/jquery-extra-selectors.js?ver=1.0"></script>
+    <script type="text/javascript" src="~/asset/js/swfobject.js?ver=2.2-20120417"></script>
+    <script type="text/javascript" src="~/asset/js/modernizr.js?ver=2.0.6"></script>
+    <script type="text/javascript" src="~/asset/js/jflickrfeed.js?ver=1.0"></script>
+    <script type="text/javascript" src="~/asset/js/bootstrap.min.js?ver=2.3.0"></script>
     <script type="text/javascript" src="~/asset/js/jquery.form.min.js?ver=3.32.0-2013.04.03"></script>
     <script type="text/javascript" src="~/asset/js/scripts.js?ver=3.4"></script>
     <script type="text/javascript" src="~/asset/js/superfish.js?ver=1.5.3"></script>
@@ -102,6 +84,5 @@
     <script type="text/javascript" src="~/asset/js/cherry-plugin.js?ver=1.0"></script>
     <script type="text/javascript" src="~/asset/js/wow.js?ver=2.3.0"></script>
     <script type="text/javascript" src="~/asset/js/custom.js?ver=1.0"></script>
-    
 </body>
 </html>

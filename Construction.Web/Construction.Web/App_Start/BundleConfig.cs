@@ -23,9 +23,21 @@ namespace Construction.Web
             //          "~/Scripts/bootstrap.js",
             //          "~/Scripts/respond.js"));
 
-            //bundles.Add(new StyleBundle("~/Content/css").Include(
-            //          "~/Content/bootstrap.css",
-            //          "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/asset/css/bootstrap.css",
+                      "~/asset/css/responsive.css",
+                      "~/asset/css/camera.css",
+                      "~/asset/css/flexslider.css",
+                      "~/asset/css/owl.carousel.css",
+                      "~/asset/css/owl.theme.css",
+                      "~/asset/font-awesome/css/font-awesome.css",
+                      "~/asset/css/cherry-plugin.css",
+                      "~/asset/css/magnific-popup.css",
+                      "~/asset/css/main-style.css",
+                      "~/asset/css/customstyle.css",
+                      "~/asset/css/flaticon.css",
+                      "~/asset/css/animate.css"));
+           // BundleTable.EnableOptimizations = true;
         }
     }
 }

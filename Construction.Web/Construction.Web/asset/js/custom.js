@@ -189,9 +189,27 @@ jQuery(document).ready(function () {
     jQuery('.owl-prev').addClass('icon-chevron-left');
     jQuery('.owl-next').addClass('icon-chevron-right');
     // ---------------------------------------------------------
-    // Animate
+    // Menu Croll
     // ---------------------------------------------------------
+    jQuery('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+            var target = jQuery(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                jQuery('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+                /*Credit by: Dang Ngoc Binh - From Thik Share*/
+            }
+        }
+    });
+
 });
+// ---------------------------------------------------------
+// Animate
+// ---------------------------------------------------------
 wow = new WOW(
       {
           animateClass: 'animated',
