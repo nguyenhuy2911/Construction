@@ -1,5 +1,5 @@
 @import url("style.css");
-@import url(//fonts.googleapis.com/css?family=Francois+One|Oswald|Roboto+Condensed:300|Saira+Extra+Condensed|Fira+Sans:300|Yanone+Kaffeesatz:300|Play);
+/*@import url(//fonts.googleapis.com/css?family=Francois+One|Oswald|Roboto+Condensed:300|Saira+Extra+Condensed|Fira+Sans:300|Yanone+Kaffeesatz:300|Play);*/
 
 .main-holder {
     overflow: hidden;
@@ -321,7 +321,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
         float: right;
         display: block;
         position: relative;
-        padding: 0 96px 0 0;
+        padding: 0 0 0 0;
         z-index: 1;
     }
 
@@ -2710,6 +2710,21 @@ blockquote p {
             -webkit-transition: all 0.3s;
             -o-transition: all 0.3s;
             transition: all 0.3s;
+        }
+
+    .feature-2 .feature-icon i {
+        font-size: 45px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #f6d014;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+        .feature-2 .feature-icon i:before {
+            font-size: 45px;
         }
 
 .media-heading {

@@ -1532,7 +1532,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Home\_BannerSlider.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\Admin\asset\lib\ckeditor\plugins\imageuploader\check_permission.php" />
@@ -1584,6 +1583,7 @@
     <Content Include="Areas\Admin\Views\Service\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Project\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Project\Crud.cshtml" />
+    <Content Include="asset\font-awesome\fonts\Flaticon.woff" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Navigation\NaviBar.cshtml" />
     <Content Include="Views\FE_Project\Index.cshtml" />
