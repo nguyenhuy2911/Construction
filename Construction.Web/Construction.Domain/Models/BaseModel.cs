@@ -10,13 +10,13 @@ namespace Construction.Domain.Models
 {
     public class BaseModel
     {
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
         [MaxLength(100)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
         [MaxLength(50)]
-        public string Thumbnail { get; set; }
+        public virtual string Thumbnail { get; set; }
 
         [MaxLength(50)]
         public string CreateBy { get; set; }
