@@ -1,4 +1,4 @@
-﻿using Construction.Web.Areas.Admin.Models.Service;
+﻿using Construction.Web.Areas.Admin.Models.Setting;
 using Construction.Web.Service;
 using Newtonsoft.Json;
 using System;
@@ -10,29 +10,30 @@ using System.Web.Mvc;
 namespace Construction.Web.Areas.Admin.Controllers
 {
     [RouteArea("admin")]
-    [RoutePrefix("dich-vu")]
-    public class ServiceController : Controller
+    [RoutePrefix("cai-dat")]
+    public class SettingController : Controller
     {
-        private readonly Service_Service _service_Service;
-        public ServiceController()
+        private readonly Setting_Service _setting_Service;
+
+        public SettingController()
         {
-            this._service_Service = new Service_Service();
+            this._setting_Service = new Setting_Service();
         }
 
         [Route]
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
-            var model = new ServiceViewModel();
-            ViewBag.Title = "Danh sách dịch vụ";
+            ViewBag.Title = "Cài đặt";
+            var model = new SettingViewModel();
             return View(model);
         }
 
         [HttpPost]
         [Route("get-list")]
-        public string GetServices(ServiceViewModel model)
+        public string GetServices(SettingViewModel model)
         {
-            var data = _service_Service.GetServices(model.Page);
+            var data = _setting_Service.GetSettings(model.Page);
             string jsonData = JsonConvert.SerializeObject(data);
             return jsonData;
         }
@@ -42,9 +43,9 @@ namespace Construction.Web.Areas.Admin.Controllers
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Create()
         {
-            var model = new ServiceCrudViewModel();
-            ViewBag.Title = "Thêm mới dịch vụ";
-            return View("~/Areas/Admin/Views/Service/Crud.cshtml", model);
+            var model = new SettingCrudViewModel();
+            ViewBag.Title = "Thêm cài đặt";
+            return View("~/Areas/Admin/Views/Setting/Crud.cshtml", model);
         }
 
         [HttpGet]
@@ -52,24 +53,24 @@ namespace Construction.Web.Areas.Admin.Controllers
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Edit(int id)
         {
-            var model = new ServiceCrudViewModel();
-            model = _service_Service.Find(id);
-            ViewBag.Title = "Cập nhật dịch vụ";
-            return View("~/Areas/Admin/Views/Service/Crud.cshtml", model);
+            var model = new SettingCrudViewModel();
+            model = _setting_Service.Find(id);
+            ViewBag.Title = "Cập nhật";
+            return View("~/Areas/Admin/Views/Setting/Crud.cshtml", model);
         }
 
         [HttpPost]
         [Route("save")]
-        public ActionResult Save(ServiceCrudViewModel model)
+        public ActionResult Save(SettingCrudViewModel model)
         {
             int id = 0;
             if (!string.IsNullOrEmpty(model.Id.ToString()) && model.Id > 0)
             {
-                id = _service_Service.UpdateService(model);
+                id = _setting_Service.UpdateSetting(model);
             }
             else
             {
-                id = _service_Service.CreateService(model);
+                id = _setting_Service.CreateSetting(model);
 
             }
             return RedirectToAction("Edit", new { id = id });

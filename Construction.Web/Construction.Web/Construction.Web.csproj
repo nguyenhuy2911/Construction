@@ -259,6 +259,8 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\ServiceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SettingController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StaticPageController.cs" />
     <Compile Include="Areas\Admin\Models\Category\CategoryCrudViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Category\CategoryViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Product\ProductCrudViewModel.cs" />
@@ -267,6 +269,11 @@
     <Compile Include="Areas\Admin\Models\Project\ProjectViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Service\ServiceCrudViewModel.cs" />
     <Compile Include="Areas\Admin\Models\Service\ServiceViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Setting\SettingCrudViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Setting\SettingViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\StaticPage\StaticPageViewModel.cs" />
+    <Compile Include="Common\EnumExtensions.cs" />
+    <Compile Include="Common\Enums\SettingType.cs" />
     <Compile Include="Common\HtmlHelperExtention.cs" />
     <Compile Include="Common\UploadFile.cs" />
     <Compile Include="Common\UrlHelperExtentions.cs" />
@@ -295,12 +302,14 @@
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\Frontend\FEProduct_Service.cs" />
     <Compile Include="Service\Frontend\FEProject_Service.cs" />
+    <Compile Include="Service\Frontend\FESetting_Service.cs" />
     <Compile Include="Service\Frontend\FESupport_Service.cs" />
     <Compile Include="Service\Frontend\Navigation_Service.cs" />
     <Compile Include="Service\Product_Service.cs" />
     <Compile Include="Service\Project_Service.cs" />
     <Compile Include="Service\Category_Service.cs" />
     <Compile Include="Service\Service_Service.cs" />
+    <Compile Include="Service\Setting_Service.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1570,6 +1579,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\StaticPage\" />
     <Folder Include="uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -1584,6 +1594,8 @@
     <Content Include="Areas\Admin\Views\Project\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Project\Crud.cshtml" />
     <Content Include="asset\font-awesome\fonts\Flaticon.woff" />
+    <Content Include="Areas\Admin\Views\Setting\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\Crud.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Navigation\NaviBar.cshtml" />
     <Content Include="Views\FE_Project\Index.cshtml" />
