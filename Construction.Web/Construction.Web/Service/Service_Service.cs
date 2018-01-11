@@ -7,7 +7,7 @@ using System.Web;
 using Construction.Domain.Helper;
 namespace Construction.Web.Service
 {
-    public class Service_Service
+    public class Service_Service: BaseService
     {
         private readonly DataBaseManager<Construction.Domain.Models.Service> _serviceManager = DataBaseManager<Construction.Domain.Models.Service>.Create();
         public Result<List<Construction.Domain.Models.Service>> GetServices(Page page)

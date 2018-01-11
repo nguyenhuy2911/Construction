@@ -25,12 +25,10 @@ namespace Construction.Web.Common
            
             TagBuilder dropdown = new TagBuilder("select");
             dropdown.Attributes.Add("name", fullName);
-            dropdown.MergeAttributes(htmlAttributes); //dropdown.MergeAttributes(new RouteValueDictionary(htmlAttributes));
+            dropdown.MergeAttributes(htmlAttributes);
             dropdown.MergeAttributes(htmlHelper.GetUnobtrusiveValidationAttributes(name, metadata));
 
             StringBuilder options = new StringBuilder();
-
-            // Make optionLabel the first item that gets rendered.
             if (optionLabel != null)
                 options.Append("<option value='" + String.Empty + "'>" + optionLabel + "</option>");
 
