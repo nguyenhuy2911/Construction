@@ -71,6 +71,12 @@
                     return $div.html();
                 }
             }
+            else {
+                objColumn.render = function (data, type, row, meta) {                 
+                    return htmlDecode(data);
+                }
+            }
+
             columnRender.push(objColumn);
         })
         $this.DataTables = $('#grid-data').DataTable({

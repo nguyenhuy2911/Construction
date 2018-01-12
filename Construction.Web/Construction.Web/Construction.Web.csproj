@@ -1437,6 +1437,7 @@
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\richcombo.css" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\skin.js" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Areas\Admin\script\Helper.js" />
     <Content Include="Areas\Admin\script\Product\Product.js" />
     <Content Include="Areas\Admin\script\Product\Product_Crud.js" />
     <Content Include="Areas\Admin\script\Project\Project.js" />
@@ -1466,6 +1467,7 @@
     <Content Include="asset\images\slider-2.jpg" />
     <Content Include="asset\images\slider-3.jpg" />
     <Content Include="asset\images\totop.png" />
+    <Content Include="asset\css\animate.min.css" />
     <Content Include="asset\js\bootstrap.min.js" />
     <Content Include="asset\js\camera.min.js" />
     <Content Include="asset\js\cherry-plugin.js" />
@@ -1488,6 +1490,7 @@
     <Content Include="asset\js\scripts.js" />
     <Content Include="asset\js\superfish.js" />
     <Content Include="asset\js\swfobject.js" />
+    <Content Include="asset\js\wow.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -1597,6 +1600,7 @@
     <Content Include="Views\Navigation\NaviBar.cshtml" />
     <Content Include="Views\FE_Project\Index.cshtml" />
     <Content Include="Views\FE_Project\Detail.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Construction.Domain\Construction.Domain.csproj">

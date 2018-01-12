@@ -25,12 +25,19 @@ namespace Construction.Web.Controllers
                
         public ActionResult About()
         {
-            return View();
+            var model = _setting_Service.GetAboutPage();
+            return View(model);
         }
 
         public ActionResult Contact()
         {
             var model = _setting_Service.GetContactPage();
+            return View(model);
+        }
+
+        public ActionResult Service()
+        {
+            var model = _setting_Service.GetServiceContent();
             return View(model);
         }
     }

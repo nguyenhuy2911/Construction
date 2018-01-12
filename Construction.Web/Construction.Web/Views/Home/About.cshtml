@@ -1,7 +1,24 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Giới thiệu";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+@model Construction.Domain.Models.Setting
+<div class="container">
+    <div class="row">
+       
+        <div class="span12" data-motopress-wrapper-file="page-fullwidth.php" data-motopress-wrapper-type="content">
+            <div class="row">
+                <div class="span12" data-motopress-type="static" data-motopress-static-file="static/static-title.php">
+                    <section class="title-section">
+                        <h1 class="title-header">
+                           Giới thiệu về công ty
+                        </h1>
+                        @Html.Action("Breadcrumb", "Navigation")
+                    </section>
+                </div>
+            </div>
+            <div id="content" class="row">
+                @Html.Raw(WebUtility.HtmlDecode(Model.Description))
+            </div>
+        </div>
+    </div>
+</div>

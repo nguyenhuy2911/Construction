@@ -9,6 +9,9 @@ namespace Construction.Web.Common.Enums
     // Maxlenght = 10
     public enum SETTINGTYPE
     {
+        [Display(Name = "Logo")]
+        LOGO,
+
         [Display(Name = "Số điện thoại")]
         PHONE,
 
@@ -25,6 +28,9 @@ namespace Construction.Web.Common.Enums
         CONTACT,
 
         [Display(Name = "Giới thiệu")]
-        ABOUT
+        ABOUT,
+
+        [Display(Name = "Dịch vụ")]
+        SERVICE
     }
 }
