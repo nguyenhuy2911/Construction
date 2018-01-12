@@ -13,11 +13,12 @@ namespace Construction.Web.Areas.Admin.Controllers
     [RoutePrefix("dich-vu")]
     public class ServiceController : Controller
     {
-        private Service_Service _service_Service { get; set; }
+        private readonly Service_Service _service_Service;
         public ServiceController()
         {
             this._service_Service = new Service_Service();
         }
+
         [Route]
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()

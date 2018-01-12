@@ -1,4 +1,6 @@
 ﻿using Construction.Domain.Infrastructure;
+using Construction.Web.Service.Frontend;
+using Construction.Web.Service.FrontEnd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,12 @@ namespace Construction.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly FESetting_Service _setting_Service;
+        public HomeController()
+        {
+            this._setting_Service = new FESetting_Service();
+        }
+
         [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {          
@@ -17,12 +25,14 @@ namespace Construction.Web.Controllers
                
         public ActionResult About()
         {
-            return View();
+            var model = _setting_Service.GetAboutPage();
+            return View(model);
         }
 
         public ActionResult Contact()
         {
-            return View();
+            var model = _setting_Service.GetContactPage();
+            return View(model);
         }
     }
 }

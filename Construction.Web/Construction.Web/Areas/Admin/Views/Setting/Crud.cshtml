@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model Construction.Web.Areas.Admin.Models.Setting.SettingCrudViewModel
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>@ViewBag.Title</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    @if (Model.Id > 0)
+                    {
+                        <li>
+                            <a href="/admin/cai-dat/them-moi"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Thêm</a>
+                        </li>
+                    }
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" action="/admin/cai-dat/save" method="post" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+                    @Html.HiddenFor(p => p.Id)
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                            <label>
+                                Loại cài đặt <span class="required">*</span>
+                            </label>
+                            @Html.DropDownListFor(m => m.Type, Model.ListSettingType, "- Chọn loại cài đặt -", new { @class = "form-control", @required = "required" })
+                        </div>                        
+                    </div>                    
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <label>
+                               Giá trị <span class="required">*</span>
+                            </label>
+                            <textarea id="Description" name="Description" required="required" class="form-control col-md-7 col-xs-12" rows="3">@Model.Description</textarea>
+                        </div>
+                    </div>                  
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-left">
+                            <a href="/admin/cai-dat" class="btn btn-link"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Quay lại</a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                            <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> làm mới</button>
+                            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Lưu</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var editor = CKEDITOR.replace('Description');
+</script>
+

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace Construction.Web.Controllers
 {
+    [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
     public class NavigationController : Controller
     {
         private Navigation_Service _navService { get; set; }
@@ -15,8 +16,7 @@ namespace Construction.Web.Controllers
         {
             this._navService = new Navigation_Service();
         }
-
-        [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
+        
         public ActionResult NaviBar()
         {
             var model = new NavigationViewModel();
@@ -24,6 +24,7 @@ namespace Construction.Web.Controllers
             return View(model);
         }
 
+      
         public ActionResult Breadcrumb()
         {
            

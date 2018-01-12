@@ -11,12 +11,12 @@ namespace Construction.Web.Areas.Admin.Models.Service
     {
         public ServiceViewModel()
         {
-            GridHeader = DataTableGridHelper.GetHeaderJson<Servic_Grid_Column>();
+            GridHeader = DataTableGridHelper.GetHeaderJson<Service_Grid_Column>();
         }
         public string GridHeader { get; set; }
         public Page Page { get; set; }
     }
-    public class Servic_Grid_Column
+    public class Service_Grid_Column
     {
         [TableHeader(title = "Id")]
         public string Id { get; set; }

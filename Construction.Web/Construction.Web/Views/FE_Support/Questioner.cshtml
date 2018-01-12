@@ -2,29 +2,33 @@
     Layout = null;
 }
 <div class="row">
-    <div class="span7">
-
-        <div id="respond">
-            <h3>Tư vấn</h3>
-            <i>Hãy nhập thông tin của bạn để được chúng tôi tư vấn</i>
-            <div class="cancel-comment-reply">
-                <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress_47532/portfolio-view/sed-ut-perspiciatis-unde/#respond" style="display:none;">Click here to cancel reply.</a></small>
+    <div class="span12">
+        <h2>Liên hệ với chúng tôi để được tư vấn</h2>
+        <i>Hãy nhập thông tin của bạn để được chúng tôi tư vấn</i>
+        <div class="row">
+            <div class="span8">
+                <form action="/" method="post" class="wpcf7-form" novalidate="novalidate">
+                    <div class="row-fluid">
+                        <p class="span4 field">
+                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Tên:">
+                        </p>
+                        <p class="span4 field">
+                            <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="E-mail:">
+                        </p>
+                        <p class="span4 field">
+                            <input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Số điện thoại:">
+                        </p>
+                    </div>
+                    <p class="field">
+                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Tin nhắn:"></textarea>
+                    </p>
+                    <p class="submit-wrap">
+                        <button name="submit" type="submit" class="md-button btn-deep-purple waves-effect" id="submit" tabindex="4">
+                            <span>  Gửi  </span>&nbsp; <i class="fa fa-send-o" aria-hidden="true"></i>
+                        </button>
+                    </p>
+                </form>
             </div>
-            <form action="#" method="post" id="commentform">
-                <p class="field">
-                    <input type="text" name="author" id="author" placeholder="Nhập tên" tabindex="1" aria-required="true">
-                </p>
-                <p class="field">
-                    <input type="text" name="email" id="email" placeholder="Số điện thoại" size="22" tabindex="2" aria-required="true">
-                </p>
-                <p>
-                    <textarea name="comment" id="comment" cols="58" rows="10" tabindex="3" placeholder="Lời nhắn"></textarea>
-                </p>
-                <button name="submit" type="submit" class="md-button btn-deep-purple waves-effect" id="submit" tabindex="4">
-                    <span>  Gửi  </span>&nbsp; <i class="fa fa-send-o" aria-hidden="true"></i>
-                </button>
-
-            </form>
         </div>
     </div>
 </div>

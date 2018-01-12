@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Construction.Web.Controllers
 {
+    [OutputCache(CacheProfile = "SystemCache", Location = System.Web.UI.OutputCacheLocation.Client)]
     public class FE_SupportController : Controller
     {
         public ActionResult Questioner()
