@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Construction.Domain.Models
 {
+    [Table("Category")]
     public partial class Category : BaseModel
     {
         

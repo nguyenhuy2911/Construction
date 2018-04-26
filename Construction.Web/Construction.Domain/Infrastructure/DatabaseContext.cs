@@ -10,8 +10,8 @@ namespace Construction.Domain.Infrastructure
     {
         public DatabaseContext(): base("Name=DatabaseContext")
         {
-            //Database.SetInitializer(new DataContextDBInitializer());
-            Database.SetInitializer<DatabaseContext>(null);
+            Database.SetInitializer(new DataContextDBInitializer());
+         //   Database.SetInitializer<DatabaseContext>(null);
             this.Configuration.LazyLoadingEnabled = true;
         }
         public virtual void Commit()
