@@ -34,11 +34,5 @@ namespace Construction.Web.Controllers
             var model = _setting_Service.GetContactPage();
             return View(model);
         }
-
-        public ActionResult Service()
-        {
-            var model = _setting_Service.GetServiceContent();
-            return View(model);
-        }
     }
 }

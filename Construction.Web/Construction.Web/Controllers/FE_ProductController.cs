@@ -27,7 +27,7 @@ namespace Construction.Web.Controllers
         public ActionResult HomeItems()
         {
             var model = _product_Service.GetHomeItems();
-            return View("~/Views/FE_Product/_HomeItems.cshtml", model);
+            return View(model);
         }
 
         public ActionResult RelateItems()

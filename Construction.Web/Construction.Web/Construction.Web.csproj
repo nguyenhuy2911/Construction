@@ -278,6 +278,7 @@
     <Compile Include="Common\UploadFile.cs" />
     <Compile Include="Common\UrlHelperExtentions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FE_ServiceController.cs" />
     <Compile Include="Controllers\FE_ProductController.cs" />
     <Compile Include="Controllers\FE_ProjectController.cs" />
     <Compile Include="Controllers\FE_SupportController.cs" />
@@ -1442,6 +1443,7 @@
     <Content Include="Areas\Admin\script\Product\Product_Crud.js" />
     <Content Include="Areas\Admin\script\Project\Project.js" />
     <Content Include="Areas\Admin\script\Project\Project_Crud.js" />
+    <Content Include="asset\css\animate.css" />
     <Content Include="asset\css\bootstrap.css" />
     <Content Include="asset\css\camera.css" />
     <Content Include="asset\css\cherry-plugin.css" />
@@ -1491,7 +1493,7 @@
     <Content Include="asset\js\scripts.js" />
     <Content Include="asset\js\superfish.js" />
     <Content Include="asset\js\swfobject.js" />
-    <Content Include="asset\js\wow.min.js" />
+    <Content Include="asset\js\wow.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -1542,7 +1544,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Home\_BannerSlider.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\Admin\asset\lib\ckeditor\plugins\imageuploader\check_permission.php" />
@@ -1568,10 +1569,10 @@
     <Content Include="Areas\Admin\asset\lib\ckeditor\skins\moono-lisa\readme.md" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Areas\Admin\asset\lib\ckfinder\userfiles\.htaccess" />
-    <Content Include="Views\FE_Project\_HomeItems.cshtml" />
+    <Content Include="Views\FE_Project\HomeItems.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Crud.cshtml" />
-    <Content Include="Views\FE_Product\_HomeItems.cshtml" />
+    <Content Include="Views\FE_Product\HomeItems.cshtml" />
     <Content Include="Views\FE_Product\Index.cshtml" />
     <Content Include="Views\Navigation\Breadcrumb.cshtml" />
     <Content Include="Views\_Partial\Items.cshtml" />
@@ -1595,12 +1596,14 @@
     <Content Include="Areas\Admin\Views\Service\Crud.cshtml" />
     <Content Include="Areas\Admin\Views\Project\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Project\Crud.cshtml" />
+    <Content Include="asset\font-awesome\fonts\Flaticon.woff" />
     <Content Include="Areas\Admin\Views\Setting\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Setting\Crud.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Navigation\NaviBar.cshtml" />
     <Content Include="Views\FE_Project\Index.cshtml" />
     <Content Include="Views\FE_Project\Detail.cshtml" />
+    <Content Include="Views\FE_Service\HomeItems.cshtml" />
     <Content Include="Views\Home\Service.cshtml" />
     <None Include="Properties\PublishProfiles\construction.pubxml" />
   </ItemGroup>
