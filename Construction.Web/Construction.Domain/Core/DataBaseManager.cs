@@ -13,18 +13,17 @@ namespace Construction.Domain.Core
     public class DataBaseManager<T>  where T : class
     {
         private static DataBaseManager<T> databaseManager;
-        private static DatabaseContext dataContext;
+        private  DatabaseContext dataContext;
         private readonly IDbSet<T> dbset;
 
         public DataBaseManager()
         {
-            this.CreateDatabaseContext();
-            dbset = dataContext.Set<T>();
+            dbset = DataContext.Set<T>();
         }
 
-        public DatabaseContext CreateDatabaseContext()
+        public DatabaseContext DataContext
         {
-            return dataContext = new DatabaseContext();
+            get { return dataContext ?? (dataContext = new DatabaseFactory().Get()); }
         }
 
         public static DataBaseManager<T> Create()

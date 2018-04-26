@@ -1459,6 +1459,7 @@
     <Content Include="asset\font-awesome\css\font-awesome.css" />
     <Content Include="asset\font-awesome\css\font-awesome.min.css" />
     <Content Include="asset\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="asset\images\blank.gif" />
     <Content Include="asset\images\camera\camera-loader.gif" />
     <Content Include="asset\images\camera\camera_skins.png" />
     <Content Include="asset\images\loading_32.gif" />
@@ -1604,6 +1605,7 @@
     <Content Include="Views\FE_Project\Detail.cshtml" />
     <Content Include="Views\FE_Service\HomeItems.cshtml" />
     <Content Include="Views\Home\Service.cshtml" />
+    <None Include="Properties\PublishProfiles\construction.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Construction.Domain\Construction.Domain.csproj">

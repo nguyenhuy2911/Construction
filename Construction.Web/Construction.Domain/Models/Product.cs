@@ -4,12 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 namespace Construction.Domain.Models
 {
+    [Table("Product")]
     public partial class Product :BaseModel
     {
-        public Product()
-        {
-           
-        }
        
         [MaxLength(20)]
         public string Code { get; set; }

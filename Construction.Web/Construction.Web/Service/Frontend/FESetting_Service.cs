@@ -20,19 +20,18 @@ namespace Construction.Web.Service.Frontend
         {
             var data = _settingManager.GetPage(new Page(0, 10), p => p.Type == SETTINGTYPE.ABOUT.ToString(), p
                    => p.Id)?.Results?.FirstOrDefault();
-            return data;
+            return data ?? new Setting();
         }
         public Setting GetContactPage()
         {
             var data = _settingManager.GetPage(new Page(0, 10), p => p.Type == SETTINGTYPE.CONTACT.ToString(), p
                    => p.Id)?.Results?.FirstOrDefault();
-            return data;
+            return data ?? new Setting();
         }
         public Setting GetServiceContent()
         {
-            var data = _settingManager.GetPage(new Page(0, 10), p => p.Type == SETTINGTYPE.SERVICE.ToString(), p
-                   => p.Id)?.Results?.FirstOrDefault();
-            return data;
+            var data = _settingManager.GetPage(new Page(0, 10), p => p.Type == SETTINGTYPE.SERVICE.ToString(), p => p.Id)?.Results?.FirstOrDefault();
+            return data ?? new Setting();
         }
     }
 }

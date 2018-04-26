@@ -5,31 +5,35 @@
 @using Construction.Domain.Core
 @model Pagination<Item>
 <ul id="portfolio-grid" class="filterable-portfolio thumbnails portfolio-3cols isotope" data-cols="3cols">
-    @foreach (var item in Model.Items)
+    @if (Model != null && Model.Items != null)
     {
-        <li class="portfolio_item">
-            <div class="portfolio_item_holder">
-                <figure class="thumbnail thumbnail__portfolio">
-                    <a href="@item.Link" title="@item.Name" class="image-wrap" rel="prettyPhoto">
-                        <img data-src="@item.Thumbnail" alt="@item.Name" class="hoverZoomLink">
-                        <span class="zoom-icon"></span>
-                    </a>
-                </figure>
-                <div class="caption caption__portfolio">
-                    <a href="@item.Link" title="@item.Name">
-                        <h6>@item.Name </h6>
-                    </a>
-                    @Html.Raw( WebUtility.HtmlDecode( item.ShortDescription))
-                    <p>
-                        <a href="@item.Link" title="@item.Name" class="btn btn-primary">
-                            <i class="fa fa-angle-double-right" aria-hidden="true"></i> Xem
+        foreach (var item in Model.Items)
+        {
+            <li class="portfolio_item">
+                <div class="portfolio_item_holder">
+                    <figure class="thumbnail thumbnail__portfolio">
+                        <a href="@item.Link" title="@item.Name" class="image-wrap" rel="prettyPhoto">
+                            <img data-src="@item.Thumbnail" alt="@item.Name" class="hoverZoomLink">
+                            <span class="zoom-icon"></span>
                         </a>
-                    </p>
-                </div>
+                    </figure>
+                    <div class="caption caption__portfolio">
+                        <a href="@item.Link" title="@item.Name">
+                            <h6>@item.Name </h6>
+                        </a>
+                        @Html.Raw(WebUtility.HtmlDecode(item.ShortDescription))
+                        <p>
+                            <a href="@item.Link" title="@item.Name" class="btn btn-primary">
+                                <i class="fa fa-angle-double-right" aria-hidden="true"></i> Xem
+                            </a>
+                        </p>
+                    </div>
 
-            </div>
-        </li>
+                </div>
+            </li>
+        }
     }
+
 </ul>
 <div class="pagination pagination__posts">
     <ul>

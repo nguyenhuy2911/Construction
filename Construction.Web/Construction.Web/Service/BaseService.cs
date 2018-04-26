@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Construction.Web.Service
 {
-    public class BaseService: Disposable
+    public class BaseService
     {
         public UrlHelper Url = new UrlHelper(HttpContext.Current.Request.RequestContext);
     }

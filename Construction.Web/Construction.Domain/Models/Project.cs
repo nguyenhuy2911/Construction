@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Construction.Domain.Models
 {
+    [Table("Project")]
     public class Project : BaseModel
     {
         public Project() { }
